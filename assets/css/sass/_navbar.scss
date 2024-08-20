@@ -1,0 +1,275 @@
+.page-header {
+  padding: 7px 0;
+  background-color: $main;
+
+  .header-content {
+    @include between;
+
+    .social-icon {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .social-ic {
+        @include shape(35px, 5px);
+        background-color: rgba($color: $sec, $alpha: 1.0);
+        @include center;
+        .ic {
+          max-width: 15px;
+          max-height: 15px;
+        }
+      }
+    }
+
+    .service-request{
+      color: $white;
+      position: relative;
+      height: 38px;
+      // background-color: $sec;
+      // border: 1px solid $sec;
+      transition: $main-transition;
+      @include center;
+      padding: 5px 14px;
+      font-size: 15px;
+      z-index: 2;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $sec;
+        z-index: -1;
+        animation: pulse 600ms infinite alternate;
+
+        @media screen and (max-width: $screen-lg) {
+          left: unset;
+          transform: unset;
+          height: 100%;
+          width: 100%;
+          border-radius: 8px;
+        }
+      }
+
+    }
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.page-navbar {
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 888;
+  background-color: transparent;
+  transition: $main-transition;
+  box-shadow: $main-shadow;
+
+  @media screen and (max-width: $screen-lg) {
+    position: unset;
+    padding: 12px 0;
+  }
+
+  .navbar-content {
+    @include between;
+
+    .logo {
+      .logo-img {
+        max-width: 160px;
+        max-height: 100px;
+        transition: $main-transition;
+
+        @media screen and (max-width: $screen-sm) {
+          max-width: 120px;
+        }
+      }
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      transition: all 0.8s cubic-bezier(0.68, -0.3, 0.265, 1.3);
+      border-bottom: 1px solid rgba($color: #fff, $alpha: .2);
+
+      @media screen and (max-width:$screen-lg) {
+          position: fixed;
+          top: 0;
+          @include dir-left(0);
+          height: 100vh;
+          width: 280px;
+          flex-direction: column;
+          align-items: flex-start;
+          background-color: $white;
+          box-shadow: $nav-shadow;
+          z-index: 2000;
+          padding: 30px 20px;
+          gap: 8px;
+          #{$ltr} & {
+              transform: translateX(-150%);
+          }
+          #{$rtl} & {
+              transform: translateX(150%);
+          }
+
+          &.active{
+              transform: translateX(0) !important;
+          }
+
+          overflow-y: auto;
+          overflow-x: clip;
+
+          &::-webkit-scrollbar {
+              width: 5px;
+          }
+          &::-webkit-scrollbar-track {
+              background: transparent;
+          }
+          &::-webkit-scrollbar-thumb {
+              border-radius: 25px;
+              background-color: $main;
+          }
+      }
+
+      .logo {
+        display: none;
+        max-width: 80px;
+        max-height: 90px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        @media screen and (max-width: $screen-lg) {
+          display: block;
+          margin: 0 auto 25px;
+        }
+      }
+
+      .link {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        height: 52px;
+        font-size: 14px;
+        color: $white;
+        transition: $main-transition;
+        position: relative;
+
+        @media screen and (max-width:$screen-lg) {
+          width: 100%;
+        }
+
+        &::after{
+          position: absolute;
+          bottom: -1px;
+          left: 50%;
+          transform: translateX(-50%);
+          content: '';
+          width: 30px;
+          height: 2px;
+          background-color: $main;
+          transition: $main-transition;
+          opacity: 0;
+          @include border-radius(5px);
+        }
+
+        i{
+            font-size: 8px;
+        }
+
+        :last-child {
+          margin-left: 0;
+        }
+
+        &:hover, &.active {
+          color: $main !important;
+          &::after{
+              opacity: 1;
+          }
+        }
+      }
+    }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      @media screen and (min-width: $screen-lg) and (max-width: $screen-lg2) {
+        gap: 8px;
+      }
+
+      @media screen and (max-width: $screen-xs) {
+        gap: 8px;
+      }
+
+      .nav-ic {
+        @include circle(42px);
+        @include center;
+        background-color: $light;
+        cursor: pointer;
+        position: relative;
+
+        &.bell {
+          &::after {
+            content: "";
+            position: absolute;
+            @include circle(10px);
+            top: 5px;
+            @include dir-left(-2px);
+            background-color: $red;
+            border: 1px solid $white;
+          }
+        }
+
+        .ic {
+          max-width: 20px;
+          max-height: 20px;
+          font-size: 18px;
+          color: $main;
+        }
+      }
+
+      .side-open {
+        display: none;
+        cursor: pointer;
+
+        @media screen and (max-width: $screen-lg) {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &.scroll {
+    top: -1px;
+    padding: 7px;
+    box-shadow: $main-shadow;
+
+    .navbar-content {
+      @include between;
+
+      .logo {
+        .logo-img {
+          max-width: 65px;
+          max-height: 80px;
+        }
+      }
+    }
+  }
+}

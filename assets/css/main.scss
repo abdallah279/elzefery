@@ -223,13 +223,14 @@
       content: "";
       @include dir-left(30px);
       position: absolute;
-      top: -20px;
-      width: 98%;
-      height: 95%;
-      border: 3px solid $main;
+      top: -16px;
+      width: 97.5%;
+      height: 94%;
+      // border: 3px solid $main;
+      background-color: rgba($color: $main, $alpha: .3);
       z-index: -1;
       border-start-start-radius: 10px;
-      border-start-end-radius: 120px;
+      border-start-end-radius: 70px;
     }
 
     &::after {
@@ -239,7 +240,8 @@
       bottom: -20px;
       width: 100px;
       height: 100px;
-      border: 3px solid rgba($color: $sec, $alpha: .5);
+      // border: 3px solid rgba($color: $sec, $alpha: .5);
+      background-color: rgba($color: $sec, $alpha: .3);
       z-index: -1;
       border-end-start-radius: 10px;
     }
@@ -249,7 +251,7 @@
       height: 100%;
       object-fit: cover;
       border-start-start-radius: 10px;
-      border-start-end-radius: 120px;
+      border-start-end-radius: 70px;
     }
   }
 
@@ -293,7 +295,7 @@
 /********************* Start Before Crads section *********************/
 
 .before_cards {
-  padding: 60px 0 10px;
+  padding: 30px 0 10px;
   position: relative;
   z-index: 2;
 
@@ -303,8 +305,8 @@
     }
 
     .text {
-      font-size: 16px;
-      color: $main;
+      font-size: 15px;
+      color: $dark;
       // margin: 18px 0;
       line-height: 1.7;
 
@@ -320,9 +322,9 @@
 /********************* Start services-card section *********************/
 .main-cards {
   position: relative;
-  z-index: 3;
+  z-index: 5;
 
-  .owl-stage{
+  .owl-stage {
     padding-top: 10px;
     padding-bottom: 20px;
   }
@@ -335,8 +337,8 @@
   z-index: 5;
   background-color: $white;
   padding: 7px;
-  border-start-end-radius: 25px;
-    border-start-start-radius: 12px;
+  border-start-end-radius: 35px;
+  border-start-start-radius: 10px;
   box-shadow: $main-shadow;
 
   // &::after {
@@ -352,12 +354,12 @@
   //   opacity: 1;
   // }
 
-  .image{
+  .image {
     width: 100%;
     height: 240px;
     overflow: hidden;
-    border-start-end-radius: 25px;
-    border-start-start-radius: 12px;
+    border-start-end-radius: 30px;
+    border-start-start-radius: 8px;
 
     .service-img {
       width: 100%;
@@ -374,20 +376,10 @@
     padding: 20px 10px;
     position: relative;
 
-    .icon{
+    .small_icon {
       position: absolute;
       top: -20px;
       @include dir-right(20px);
-      @include center;
-      @include shape(40px, 0);
-      border-end-start-radius: 5px;
-      border-start-end-radius: 5px;
-      background: linear-gradient(0, rgba($color: $black, $alpha: .9), rgba($color: $main, $alpha: 1) 100%);
-      color: $white;
-
-      .img{
-        max-width: 20px;
-      }
     }
 
     .service-name {
@@ -448,51 +440,75 @@
 
   .owl-nav {
     position: absolute;
-    top: -80px;
-    display: flex;
-    gap: 7px;
-    width: fit-content;
     @include dir-right(0);
+    top: -70px;
 
     @include devices(xs) {
       display: none;
-    }
-
-    .owl-next,
-    .owl-prev {
-      @include shape(40px);
-      @include center;
-      border-start-end-radius: 5px;
-      border-end-start-radius: 5px;
-      border: 1px solid $main !important;
-      background-color: $white !important;
-      color: $main !important;
-      font-size: 14px !important;
-      transition: $main-transition;
-
-      &:hover {
-        background-color: $main !important;
-        color: $white !important;
-      }
     }
   }
 }
 
 /********************* End services-card section *********************/
 
-/********************* Start After Crads section *********************/
-.after_cards {
-  height: 400px;
-  position: relative;
-  margin-top: -201px;
-  // margin-bottom: 160px;
-  z-index: 2;
+/********************* Strat owl Carousel *********************/
+.owl-nav {
+  display: flex;
+  gap: 7px;
+  width: fit-content;
 
-  .image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .owl-next,
+  .owl-prev {
+    @include shape(40px);
+    @include center;
+    border-start-end-radius: 5px;
+    border-end-start-radius: 5px;
+    border: 1px solid $main !important;
+    background-color: $white !important;
+    color: $main !important;
+    font-size: 12px !important;
+    transition: $main-transition;
+
+    &:hover {
+      background-color: $main !important;
+      color: $white !important;
+    }
   }
+}
+
+.owl-dots {
+  @include center;
+  gap: 7px;
+  margin-top: 15px;
+
+  .owl-dot {
+    @include circle(7px);
+    background-color: rgba($color: #272265, $alpha: 0.24) !important;
+    // opacity: .5;
+    transition: $main-transition;
+
+    &.active {
+      // opacity: 1;
+      background-color: $main !important;
+    }
+  }
+}
+
+/********************* End owl Carousel *********************/
+
+/********************* Start After Crads section *********************/
+
+.after_cards {
+  // height: 460px;
+  margin-top: -201px;
+  padding-top: 280px;
+  padding-bottom: 40px;
+  position: relative;
+  z-index: 3;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
 
   &::after {
     content: "";
@@ -503,11 +519,257 @@
     height: 100%;
     background-color: rgba($color: #0a1128, $alpha: 0.7);
     // background: linear-gradient(0, rgba(0, 0, 0, .6), rgba($color: $main, $alpha: 0.5) 100%);
-    z-index: 1;
+    z-index: -1;
   }
 }
 
 /********************* Start After Crads section *********************/
+
+
+/********************* Start client-item section *********************/
+.client-item {
+  border-radius: 8px;
+  border-start-start-radius: 0;
+  background-color: $white;
+  @include center;
+  box-shadow: $main-shadow;
+  height: 120px;
+
+  .brand-img {
+    max-width: 100px;
+    filter: grayscale(100%);
+    transition: all ease 0.31s;
+    opacity: 0.6;
+
+    @media screen and (max-width: $screen-xs) {
+      max-width: 85px;
+    }
+  }
+
+  &:hover {
+    .brand-img {
+      filter: grayscale(0);
+      opacity: 1;
+    }
+  }
+}
+
+/********************* End client-item section *********************/
+
+/********************* Start customer_review section *********************/
+
+.customers_con {
+  background-color: $white;
+  // border-radius: 8px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 5;
+
+  .small_icon {
+    position: absolute;
+    top: -25px;
+    @include dir-left(-25px);
+    z-index: 1;
+    @include shape(50px);
+    background: linear-gradient(90deg, $main 0%, $main 100%);
+
+    .img {
+      max-width: 25px;
+    }
+  }
+
+  &::before {
+    // content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    @include dir-right(-10px);
+    width: 100px;
+    height: calc(100% + 20px);
+    border: 4px solid rgba($color: $main, $alpha: .5);
+    z-index: -2;
+  }
+
+  .owl-nav {
+    position: absolute;
+    bottom: 25px;
+    @include dir-left(30px);
+  }
+
+  .owl-dots {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    @include dir-left(-30px);
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
+
+.customer_review {
+  padding: 30px;
+  display: flex;
+  // align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  .content {
+    .text {
+      // color: $main;
+      font-size: 13px;
+      margin-bottom: 15px;
+      line-height: 1.8;
+      max-height: 150px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 3px;
+      }
+    }
+
+    .name {
+      font-family: fontBold;
+      font-size: 15px;
+    }
+  }
+
+  .customer-img {
+    flex-shrink: 0;
+    @include shape(240px);
+    position: relative;
+    z-index: 2;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      @include dir-right(-10px);
+      width: 100px;
+      height: calc(100% + 20px);
+      border: 4px solid rgba($color: $main, $alpha: .5);
+      z-index: -1;
+    }
+
+    .img {
+      width: 100%;
+      height: 100%;
+      border: 3px solid $white;
+      object-fit: cover;
+    }
+  }
+}
+
+/********************* Start customer_review section *********************/
+
+
+/********************* Start team-card section *********************/
+.team_sec {
+  position: relative;
+  z-index: 3;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 90px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #0a1128, $alpha: 0.7);
+    z-index: -1;
+  }
+}
+
+.team-card {
+  position: relative;
+  height: 320px;
+  border-start-end-radius: 10px;
+  border-end-start-radius: 10px;
+
+  .team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-start-end-radius: 10px;
+    border-end-start-radius: 10px;
+    transition: all 600ms linear;
+  }
+
+  .team-content {
+    background-color: $white;
+    padding: 14px 24px 18px;
+    position: absolute;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 30px);
+    bottom: -35px;
+    z-index: 1;
+    text-align: center;
+    border-start-end-radius: 10px;
+    border-end-start-radius: 10px;
+
+    .name {
+      font-size: 16px;
+      line-height: 1.2;
+      transition: $main-transition;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .jop {
+      color: $dark;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      line-height: 1;
+      transition: all 0.31s ease-in-out;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 100%;
+      background-color: $main;
+      z-index: -1;
+      transition: all 0.31s ease-in-out;
+    }
+  }
+
+  &:hover {
+    .team-img {
+      filter: grayscale(1) !important;
+    }
+
+    .team-content {
+
+      .name,
+      .jop {
+        color: $white;
+      }
+
+      &::before {
+        height: 100%;
+      }
+    }
+
+    &::before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+/********************* End team-card section *********************/
+
+
 
 /********************* Start gallary section *********************/
 .gallary {

@@ -3,6 +3,11 @@ $(window).on("load", function () {
   $(".loader-container").delay(300).fadeOut(1000);
 });
 
+// Add Sticky Header
+window.addEventListener('scroll', function () {
+  var header = document.querySelector('.page-navbar');
+  header.classList.toggle('scroll', window.pageYOffset > 100);
+});
 
 // SideBar
 $(".side-open").on("click", function () {
@@ -28,58 +33,6 @@ if ($(".select").length > 0) {
     },
   });
 }
-
-/************* Data Table *************/
-
-$(document).ready(function () {
-  let tableTanguage = {};
-
-  let arTable = {
-    paginate: {
-      previous: `<i class="fa-solid fa-angles-left"></i>`,
-      next: `<i class="fa-solid fa-angles-right"></i>`,
-    },
-    sProcessing: "جارٍ التحميل...",
-    sLengthMenu: "أظهر _MENU_ مدخلات",
-    sZeroRecords: "لم يعثر على أية سجلات",
-    sInfo: "إظهار _START_ إلى _END_ من أصل _TOTAL_ مدخل",
-    sInfoEmpty: "يعرض 0 إلى 0 من أصل 0 سجل",
-    sInfoFiltered: "(منتقاة من مجموع _MAX_ مُدخل)",
-    sInfoPostFix: "",
-  };
-
-  let enTable = {
-    paginate: {
-      previous: `<i class="fa-solid fa-angles-left"></i>`,
-      next: `<i class="fa-solid fa-angles-right"></i>`,
-    },
-    sLengthMenu: "Display _MENU_ records per page",
-    sZeroRecords: "Nothing found - sorry",
-    zInfo: "Showing page _PAGE_ of _PAGES_",
-    sInfoEmpty: "No records available",
-    sInfoFiltered: "(filtered from _MAX_ total records)",
-  };
-
-  if (isRtl) {
-    tableTanguage = arTable;
-  } else {
-    tableTanguage = enTable;
-  }
-
-  if ($("#myTable").length > 0) {
-    var myTable = $("#myTable").dataTable({
-      pageLength: 7,
-      // responsive: true,
-      bLengthChange: false,
-      ordering: false,
-      language: tableTanguage,
-    });
-
-    $("#searchTable").on("keyup", function () {
-      $("#myTable").DataTable().search($(this).val()).draw();
-    });
-  }
-});
 
 /************* Upload Files Or Img *************/
 let loginInputs = document.querySelectorAll(".img-upload-input");
@@ -221,3 +174,105 @@ function removeIcon() {
 }
 
 removeIcon();
+
+
+/******************* All Sliders *******************/
+$(document).ready(function () {
+
+  /************ services Carousel ***********/
+  let isRtl = $('html[lang="ar"]').length > 0;
+  $(".home-slider").owlCarousel({
+    items: 1,
+    loop: true,
+    animateOut: "fadeOut",
+    rtl: isRtl,
+    dots: true,
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplaySpeed: 1500,
+    smartSpeed: 1500,
+  });
+
+  /************ services Carousel ***********/
+  $(".services-slider").owlCarousel({
+    items: 1,
+    rtl: isRtl,
+    autoplaySpeed: 3000,
+    autoplayTimeout: 5000,
+    smartSpeed: 2000,
+    autoplayHoverPause: false,
+    margin: 25,
+    loop: true,
+    dots: false,
+    nav: true,
+    autoplay: true,
+    navText: [
+      `<i class="fa-solid fa-arrow-right-long"></i>`,
+      `<i class="fa-solid fa-arrow-left-long"></i>`,
+    ],
+    responsive: {
+      991: {
+        items: 3,
+      },
+      560: {
+        items: 2,
+      },
+    },
+  });
+
+  /************ Clients Carousel ***********/
+  const owlclients = $(".clients-slider");
+
+  owlclients.on("changed.owl.carousel", function (event) {
+    setTimeout(() => {
+      owlclients.find(".owl-stage-outer").addClass("py-3");
+    }, 0.1);
+  });
+  owlclients.owlCarousel({
+    items: 2,
+    loop: true,
+    rtl: isRtl,
+    margin: 35,
+    dots: false,
+    autoplay: true,
+    slideTransition: "linear",
+    autoplayTimeout: 2800,
+    autoplaySpeed: 2800,
+    autoplayHoverPause: true,
+    responsive: {
+      1000: {
+        items: 6,
+      },
+      800: {
+        items: 4,
+      },
+      400: {
+        items: 3,
+        margin: 20,
+      },
+    },
+  });
+
+  /************ customers Carousel ***********/
+  const owlCustomers = $(".customers-slider");
+
+  owlCustomers.owlCarousel({
+    items: 1,
+    rtl: isRtl,
+    autoplaySpeed: 3000,
+    autoplayTimeout: 5000,
+    smartSpeed: 2000,
+    autoplayHoverPause: false,
+    margin: 25,
+    loop: true,
+    dots: true,
+    nav: true,
+    autoplay: true,
+    navText: [
+      `<i class="fa-solid fa-arrow-right-long"></i>`,
+      `<i class="fa-solid fa-arrow-left-long"></i>`,
+    ],
+  });
+});
+

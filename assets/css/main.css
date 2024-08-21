@@ -58,7 +58,7 @@
 }
 @font-face {
   font-family: fontBold;
-  src: url("../fonts/ArbFONTS-URW-DIN-Arabic-Bold.ttf");
+  src: url("../fonts/ArbFONTS-URW-DIN-Arabic-Bold-1.ttf");
 }
 @font-face {
   font-family: fontPrima;
@@ -636,22 +636,17 @@ html[lang=ar] .ml-25 {
   }
 }
 
-.owl-dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 7px;
-  margin-top: 15px;
+.bg_small {
+  position: absolute;
+  top: 0;
+  opacity: 0.08;
+  max-width: 300px;
 }
-.owl-dots .owl-dot {
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: rgba(39, 34, 101, 0.24) !important;
-  transition: all 0.3s ease;
+html[lang=en] .bg_small {
+  left: 0;
 }
-.owl-dots .owl-dot.active {
-  background-color: #c89f6b !important;
+html[lang=ar] .bg_small {
+  right: 0;
 }
 
 /********************* Tabs *********************/
@@ -1482,6 +1477,24 @@ html[lang=ar] .copy-item {
   max-height: 15px;
 }
 
+.small_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-end-start-radius: 5px;
+  border-start-end-radius: 5px;
+  background: linear-gradient(0, rgba(0, 0, 0, 0.9), #c89f6b 100%);
+  color: #fff;
+}
+.small_icon .img {
+  max-width: 20px;
+}
+.small_icon.main {
+  background: #c89f6b !important;
+}
+
 .call-btn {
   padding: 7px 15px;
   background-color: #f8f8f8;
@@ -2215,11 +2228,11 @@ html[lang=ar] .remove-append {
 }
 
 .main-padding {
-  padding: 54px 0;
+  padding: 60px 0;
 }
 @media screen and (max-width: 425px) {
   .main-padding {
-    padding: 38px 0;
+    padding: 40px 0;
   }
 }
 
@@ -4108,74 +4121,6 @@ html[lang=ar] .pagination .page-item:last-child .page-link {
   background-color: #D44A4A;
 }
 
-.page-header {
-  padding: 7px 0;
-  background-color: #c89f6b;
-}
-.page-header .header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.page-header .header-content .social-icon {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.page-header .header-content .social-icon .social-ic {
-  width: 35px;
-  height: 35px;
-  border-radius: 5px !important;
-  background-color: #11163f;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.page-header .header-content .social-icon .social-ic .ic {
-  max-width: 15px;
-  max-height: 15px;
-}
-.page-header .header-content .service-request {
-  color: #fff;
-  position: relative;
-  height: 38px;
-  transition: all 0.3s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px 14px;
-  font-size: 15px;
-  z-index: 2;
-}
-.page-header .header-content .service-request::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #11163f;
-  z-index: -1;
-  animation: pulse 600ms infinite alternate;
-}
-@media screen and (max-width: 992px) {
-  .page-header .header-content .service-request::before {
-    left: unset;
-    transform: unset;
-    height: 100%;
-    width: 100%;
-    border-radius: 8px;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 0.3;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .page-navbar {
   padding: 10px 0;
   position: fixed;
@@ -4184,7 +4129,7 @@ html[lang=ar] .pagination .page-item:last-child .page-link {
   width: 100%;
   z-index: 888;
   background-color: transparent;
-  transition: all 0.3s ease;
+  transition: all 0.8s cubic-bezier(0.68, -0.3, 0.265, 1.3);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 992px) {
@@ -4199,9 +4144,9 @@ html[lang=ar] .pagination .page-item:last-child .page-link {
   justify-content: space-between;
 }
 .page-navbar .navbar-content .logo .logo-img {
-  max-width: 160px;
+  max-width: 140px;
   max-height: 100px;
-  transition: all 0.3s ease;
+  transition: all 0.8s cubic-bezier(0.68, -0.3, 0.265, 1.3);
 }
 @media screen and (max-width: 576px) {
   .page-navbar .navbar-content .logo .logo-img {
@@ -4224,7 +4169,7 @@ html[lang=ar] .pagination .page-item:last-child .page-link {
     flex-direction: column;
     align-items: flex-start;
     background-color: #fff;
-    box-shadow: 0 3px 16px rgba(133, 133, 133, 0.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
     z-index: 2000;
     padding: 30px 20px;
     gap: 8px;
@@ -4371,17 +4316,18 @@ html[lang=ar] .page-navbar .navbar-content .nav-icons .nav-ic.bell::after {
 }
 .page-navbar.scroll {
   top: -1px;
-  padding: 7px;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
-}
-.page-navbar.scroll .navbar-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
 }
 .page-navbar.scroll .navbar-content .logo .logo-img {
-  max-width: 65px;
-  max-height: 80px;
+  max-width: 120px;
+  max-height: 70px;
+}
+.page-navbar.scroll .navbar-content .links .link {
+  color: #272727;
+}
+.page-navbar.scroll .navbar-content .nav-icons .dropdown-toggle .drop-text, .page-navbar.scroll .navbar-content .nav-icons .dropdown-toggle .drop-ic {
+  color: #272727 !important;
 }
 
 /* Footer */
@@ -4835,13 +4781,13 @@ html[lang=ar] .social-icon {
 .about-content .about-img::before {
   content: "";
   position: absolute;
-  top: -20px;
-  width: 98%;
-  height: 95%;
-  border: 3px solid #c89f6b;
+  top: -16px;
+  width: 97.5%;
+  height: 94%;
+  background-color: rgba(200, 159, 107, 0.3);
   z-index: -1;
   border-start-start-radius: 10px;
-  border-start-end-radius: 120px;
+  border-start-end-radius: 70px;
 }
 html[lang=en] .about-content .about-img::before {
   left: 30px;
@@ -4855,7 +4801,7 @@ html[lang=ar] .about-content .about-img::before {
   bottom: -20px;
   width: 100px;
   height: 100px;
-  border: 3px solid rgba(17, 22, 63, 0.5);
+  background-color: rgba(17, 22, 63, 0.3);
   z-index: -1;
   border-end-start-radius: 10px;
 }
@@ -4871,7 +4817,7 @@ html[lang=ar] .about-content .about-img::after {
   -o-object-fit: cover;
      object-fit: cover;
   border-start-start-radius: 10px;
-  border-start-end-radius: 120px;
+  border-start-end-radius: 70px;
 }
 .about-content .content .main-title {
   margin-bottom: 18px;
@@ -4910,7 +4856,7 @@ html[lang=ar] .about-content .about-img::after {
 /********************* End About section *********************/
 /********************* Start Before Crads section *********************/
 .before_cards {
-  padding: 60px 0 10px;
+  padding: 30px 0 10px;
   position: relative;
   z-index: 2;
 }
@@ -4921,8 +4867,8 @@ html[lang=ar] .about-content .about-img::after {
   }
 }
 .before_cards .content .text {
-  font-size: 16px;
-  color: #c89f6b;
+  font-size: 15px;
+  color: #272727;
   line-height: 1.7;
 }
 @media screen and (max-width: 576px) {
@@ -4935,7 +4881,7 @@ html[lang=ar] .about-content .about-img::after {
 /********************* Start services-card section *********************/
 .main-cards {
   position: relative;
-  z-index: 3;
+  z-index: 5;
 }
 .main-cards .owl-stage {
   padding-top: 10px;
@@ -4948,16 +4894,16 @@ html[lang=ar] .about-content .about-img::after {
   z-index: 5;
   background-color: #fff;
   padding: 7px;
-  border-start-end-radius: 25px;
-  border-start-start-radius: 12px;
+  border-start-end-radius: 35px;
+  border-start-start-radius: 10px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 .services-card .image {
   width: 100%;
   height: 240px;
   overflow: hidden;
-  border-start-end-radius: 25px;
-  border-start-start-radius: 12px;
+  border-start-end-radius: 30px;
+  border-start-start-radius: 8px;
 }
 .services-card .image .service-img {
   width: 100%;
@@ -4971,27 +4917,15 @@ html[lang=ar] .about-content .about-img::after {
   padding: 20px 10px;
   position: relative;
 }
-.services-card .service-content .icon {
+.services-card .service-content .small_icon {
   position: absolute;
   top: -20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-end-start-radius: 5px;
-  border-start-end-radius: 5px;
-  background: linear-gradient(0, rgba(0, 0, 0, 0.9), #c89f6b 100%);
-  color: #fff;
 }
-html[lang=en] .services-card .service-content .icon {
+html[lang=en] .services-card .service-content .small_icon {
   right: 20px;
 }
-html[lang=ar] .services-card .service-content .icon {
+html[lang=ar] .services-card .service-content .small_icon {
   left: 20px;
-}
-.services-card .service-content .icon .img {
-  max-width: 20px;
 }
 .services-card .service-content .service-name {
   color: #272727;
@@ -5045,11 +4979,7 @@ html[lang=ar] .services-card .service-content svg {
 }
 .services-slider .owl-nav {
   position: absolute;
-  top: -80px;
-  display: flex;
-  gap: 7px;
-  width: -moz-fit-content;
-  width: fit-content;
+  top: -70px;
 }
 html[lang=en] .services-slider .owl-nav {
   right: 0;
@@ -5062,8 +4992,17 @@ html[lang=ar] .services-slider .owl-nav {
     display: none;
   }
 }
-.services-slider .owl-nav .owl-next,
-.services-slider .owl-nav .owl-prev {
+
+/********************* End services-card section *********************/
+/********************* Strat owl Carousel *********************/
+.owl-nav {
+  display: flex;
+  gap: 7px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.owl-nav .owl-next,
+.owl-nav .owl-prev {
   width: 40px;
   height: 40px;
   display: flex;
@@ -5074,28 +5013,45 @@ html[lang=ar] .services-slider .owl-nav {
   border: 1px solid #c89f6b !important;
   background-color: #fff !important;
   color: #c89f6b !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
   transition: all 0.3s ease;
 }
-.services-slider .owl-nav .owl-next:hover,
-.services-slider .owl-nav .owl-prev:hover {
+.owl-nav .owl-next:hover,
+.owl-nav .owl-prev:hover {
   background-color: #c89f6b !important;
   color: #fff !important;
 }
 
-/********************* End services-card section *********************/
+.owl-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-top: 15px;
+}
+.owl-dots .owl-dot {
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  background-color: rgba(39, 34, 101, 0.24) !important;
+  transition: all 0.3s ease;
+}
+.owl-dots .owl-dot.active {
+  background-color: #c89f6b !important;
+}
+
+/********************* End owl Carousel *********************/
 /********************* Start After Crads section *********************/
 .after_cards {
-  height: 400px;
-  position: relative;
   margin-top: -201px;
-  z-index: 2;
-}
-.after_cards .image {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  padding-top: 280px;
+  padding-bottom: 40px;
+  position: relative;
+  z-index: 3;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .after_cards::after {
   content: "";
@@ -5105,10 +5061,244 @@ html[lang=ar] .services-slider .owl-nav {
   width: 100%;
   height: 100%;
   background-color: rgba(10, 17, 40, 0.7);
-  z-index: 1;
+  z-index: -1;
 }
 
 /********************* Start After Crads section *********************/
+/********************* Start client-item section *********************/
+.client-item {
+  border-radius: 8px;
+  border-start-start-radius: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  height: 120px;
+}
+.client-item .brand-img {
+  max-width: 100px;
+  filter: grayscale(100%);
+  transition: all ease 0.31s;
+  opacity: 0.6;
+}
+@media screen and (max-width: 425px) {
+  .client-item .brand-img {
+    max-width: 85px;
+  }
+}
+.client-item:hover .brand-img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/********************* End client-item section *********************/
+/********************* Start customer_review section *********************/
+.customers_con {
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 5;
+}
+.customers_con .small_icon {
+  position: absolute;
+  top: -25px;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(90deg, #c89f6b 0%, #c89f6b 100%);
+}
+html[lang=en] .customers_con .small_icon {
+  left: -25px;
+}
+html[lang=ar] .customers_con .small_icon {
+  right: -25px;
+}
+.customers_con .small_icon .img {
+  max-width: 25px;
+}
+.customers_con::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: calc(100% + 20px);
+  border: 4px solid rgba(200, 159, 107, 0.5);
+  z-index: -2;
+}
+html[lang=en] .customers_con::before {
+  right: -10px;
+}
+html[lang=ar] .customers_con::before {
+  left: -10px;
+}
+.customers_con .owl-nav {
+  position: absolute;
+  bottom: 25px;
+}
+html[lang=en] .customers_con .owl-nav {
+  left: 30px;
+}
+html[lang=ar] .customers_con .owl-nav {
+  right: 30px;
+}
+.customers_con .owl-dots {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  flex-direction: column;
+  margin-top: 0;
+}
+html[lang=en] .customers_con .owl-dots {
+  left: -30px;
+}
+html[lang=ar] .customers_con .owl-dots {
+  right: -30px;
+}
+
+.customer_review {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.customer_review .content .text {
+  font-size: 13px;
+  margin-bottom: 15px;
+  line-height: 1.8;
+  max-height: 150px;
+  overflow-y: auto;
+}
+.customer_review .content .text::-webkit-scrollbar {
+  width: 3px;
+}
+.customer_review .content .name {
+  font-family: fontBold;
+  font-size: 15px;
+}
+.customer_review .customer-img {
+  flex-shrink: 0;
+  width: 240px;
+  height: 240px;
+  position: relative;
+  z-index: 2;
+}
+.customer_review .customer-img::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: calc(100% + 20px);
+  border: 4px solid rgba(200, 159, 107, 0.5);
+  z-index: -1;
+}
+html[lang=en] .customer_review .customer-img::after {
+  right: -10px;
+}
+html[lang=ar] .customer_review .customer-img::after {
+  left: -10px;
+}
+.customer_review .customer-img .img {
+  width: 100%;
+  height: 100%;
+  border: 3px solid #fff;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/********************* Start customer_review section *********************/
+/********************* Start team-card section *********************/
+.team_sec {
+  position: relative;
+  z-index: 3;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 90px;
+}
+.team_sec::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 17, 40, 0.7);
+  z-index: -1;
+}
+
+.team-card {
+  position: relative;
+  height: 320px;
+  border-start-end-radius: 10px;
+  border-end-start-radius: 10px;
+}
+.team-card .team-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-start-end-radius: 10px;
+  border-end-start-radius: 10px;
+  transition: all 600ms linear;
+}
+.team-card .team-content {
+  background-color: #fff;
+  padding: 14px 24px 18px;
+  position: absolute;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 30px);
+  bottom: -35px;
+  z-index: 1;
+  text-align: center;
+  border-start-end-radius: 10px;
+  border-end-start-radius: 10px;
+}
+.team-card .team-content .name {
+  font-size: 16px;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.team-card .team-content .jop {
+  color: #272727;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  transition: all 0.31s ease-in-out;
+}
+.team-card .team-content::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #c89f6b;
+  z-index: -1;
+  transition: all 0.31s ease-in-out;
+}
+.team-card:hover .team-img {
+  filter: grayscale(1) !important;
+}
+.team-card:hover .team-content .name,
+.team-card:hover .team-content .jop {
+  color: #fff;
+}
+.team-card:hover .team-content::before {
+  height: 100%;
+}
+.team-card:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/********************* End team-card section *********************/
 /********************* Start gallary section *********************/
 .gallary {
   gap: 30px;

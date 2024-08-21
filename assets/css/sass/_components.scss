@@ -366,10 +366,22 @@
 
 .bg_small{
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: .02;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  // max-width: 300px;
+}
+
+.bg_left{
+  position: absolute;
   top: 0;
   @include dir-left(0);
-  opacity: .08;
-  max-width: 300px;
+  opacity: .5;
+  max-width: 200px;
 }
 
 /********************* Tabs *********************/
@@ -624,7 +636,7 @@
     align-items: center;
     flex-wrap: wrap;
     font-size: 13px;
-    color: $main;
+    color: $white;
 
     &.active {
       color: $main;

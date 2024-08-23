@@ -1922,7 +1922,8 @@
     border: 1px solid $border-input;
     background-color: $white;
     font-weight: 500;
-    border-radius: 7px;
+    border-start-end-radius: 8px;
+    border-end-start-radius: 8px;
 
     &.photo-input {
       display: flex;

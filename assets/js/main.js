@@ -34,6 +34,9 @@ if ($(".select").length > 0) {
   });
 }
 
+//  CountUp
+$(".num").countUp();
+
 /************* Upload Files Or Img *************/
 let loginInputs = document.querySelectorAll(".img-upload-input");
 

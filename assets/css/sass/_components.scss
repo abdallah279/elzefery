@@ -1614,7 +1614,7 @@
     font-size: $i + px !important;
 
     @include devices(xs) {
-      font-size: ($i - 3px) !important;
+      font-size: ($i - 1px) !important;
     }
   }
 }

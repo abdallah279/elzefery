@@ -1295,7 +1295,7 @@ html[lang=ar] .copy-item {
   border-end-start-radius: 5px;
 }
 
-.border_r2, .services-details .services_det_img .img, .services-details .services_det_img::before, .services-details .services_det_img::after, .blog_con .blog_sidebar .blog_items .blog_item, .blog_con .blog_sidebar, .our-numbers .number-items .number-item, .main-btn {
+.border_r2, .blog-img_d, .blog_det_con, .services-details .services_det_img .img, .services-details .services_det_img::before, .services-details .services_det_img::after, .blog_con .blog_sidebar .blog_items .blog_item, .blog_con .blog_sidebar, .our-numbers .number-items .number-item, .main-btn {
   border-start-end-radius: 7px;
   border-end-start-radius: 7px;
 }
@@ -1814,7 +1814,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs1 {
-    font-size: -2px !important;
+    font-size: 0px !important;
   }
 }
 
@@ -1823,7 +1823,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs2 {
-    font-size: -1px !important;
+    font-size: 1px !important;
   }
 }
 
@@ -1832,7 +1832,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs3 {
-    font-size: 0px !important;
+    font-size: 2px !important;
   }
 }
 
@@ -1841,7 +1841,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs4 {
-    font-size: 1px !important;
+    font-size: 3px !important;
   }
 }
 
@@ -1850,7 +1850,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs5 {
-    font-size: 2px !important;
+    font-size: 4px !important;
   }
 }
 
@@ -1859,7 +1859,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs6 {
-    font-size: 3px !important;
+    font-size: 5px !important;
   }
 }
 
@@ -1868,7 +1868,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs7 {
-    font-size: 4px !important;
+    font-size: 6px !important;
   }
 }
 
@@ -1877,7 +1877,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs8 {
-    font-size: 5px !important;
+    font-size: 7px !important;
   }
 }
 
@@ -1886,7 +1886,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs9 {
-    font-size: 6px !important;
+    font-size: 8px !important;
   }
 }
 
@@ -1895,7 +1895,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs10 {
-    font-size: 7px !important;
+    font-size: 9px !important;
   }
 }
 
@@ -1904,7 +1904,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs11 {
-    font-size: 8px !important;
+    font-size: 10px !important;
   }
 }
 
@@ -1913,7 +1913,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs12 {
-    font-size: 9px !important;
+    font-size: 11px !important;
   }
 }
 
@@ -1922,7 +1922,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs13 {
-    font-size: 10px !important;
+    font-size: 12px !important;
   }
 }
 
@@ -1931,7 +1931,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs14 {
-    font-size: 11px !important;
+    font-size: 13px !important;
   }
 }
 
@@ -1940,7 +1940,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs15 {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
 }
 
@@ -1949,7 +1949,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs16 {
-    font-size: 13px !important;
+    font-size: 15px !important;
   }
 }
 
@@ -1958,7 +1958,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs17 {
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
 }
 
@@ -1967,7 +1967,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs18 {
-    font-size: 15px !important;
+    font-size: 17px !important;
   }
 }
 
@@ -1976,7 +1976,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs19 {
-    font-size: 16px !important;
+    font-size: 18px !important;
   }
 }
 
@@ -1985,7 +1985,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs20 {
-    font-size: 17px !important;
+    font-size: 19px !important;
   }
 }
 
@@ -1994,7 +1994,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs21 {
-    font-size: 18px !important;
+    font-size: 20px !important;
   }
 }
 
@@ -2003,7 +2003,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs22 {
-    font-size: 19px !important;
+    font-size: 21px !important;
   }
 }
 
@@ -2012,7 +2012,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs23 {
-    font-size: 20px !important;
+    font-size: 22px !important;
   }
 }
 
@@ -2021,7 +2021,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs24 {
-    font-size: 21px !important;
+    font-size: 23px !important;
   }
 }
 
@@ -2030,7 +2030,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs25 {
-    font-size: 22px !important;
+    font-size: 24px !important;
   }
 }
 
@@ -2039,7 +2039,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs26 {
-    font-size: 23px !important;
+    font-size: 25px !important;
   }
 }
 
@@ -2048,7 +2048,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs27 {
-    font-size: 24px !important;
+    font-size: 26px !important;
   }
 }
 
@@ -2057,7 +2057,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs28 {
-    font-size: 25px !important;
+    font-size: 27px !important;
   }
 }
 
@@ -2066,7 +2066,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs29 {
-    font-size: 26px !important;
+    font-size: 28px !important;
   }
 }
 
@@ -2075,7 +2075,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs30 {
-    font-size: 27px !important;
+    font-size: 29px !important;
   }
 }
 
@@ -2084,7 +2084,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs31 {
-    font-size: 28px !important;
+    font-size: 30px !important;
   }
 }
 
@@ -2093,7 +2093,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs32 {
-    font-size: 29px !important;
+    font-size: 31px !important;
   }
 }
 
@@ -2102,7 +2102,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs33 {
-    font-size: 30px !important;
+    font-size: 32px !important;
   }
 }
 
@@ -2111,7 +2111,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs34 {
-    font-size: 31px !important;
+    font-size: 33px !important;
   }
 }
 
@@ -2120,7 +2120,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs35 {
-    font-size: 32px !important;
+    font-size: 34px !important;
   }
 }
 
@@ -2129,7 +2129,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs36 {
-    font-size: 33px !important;
+    font-size: 35px !important;
   }
 }
 
@@ -2138,7 +2138,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs37 {
-    font-size: 34px !important;
+    font-size: 36px !important;
   }
 }
 
@@ -2147,7 +2147,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs38 {
-    font-size: 35px !important;
+    font-size: 37px !important;
   }
 }
 
@@ -2156,7 +2156,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs39 {
-    font-size: 36px !important;
+    font-size: 38px !important;
   }
 }
 
@@ -2165,7 +2165,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs40 {
-    font-size: 37px !important;
+    font-size: 39px !important;
   }
 }
 
@@ -2174,7 +2174,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs41 {
-    font-size: 38px !important;
+    font-size: 40px !important;
   }
 }
 
@@ -2183,7 +2183,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs42 {
-    font-size: 39px !important;
+    font-size: 41px !important;
   }
 }
 
@@ -2192,7 +2192,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs43 {
-    font-size: 40px !important;
+    font-size: 42px !important;
   }
 }
 
@@ -2201,7 +2201,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs44 {
-    font-size: 41px !important;
+    font-size: 43px !important;
   }
 }
 
@@ -2210,7 +2210,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs45 {
-    font-size: 42px !important;
+    font-size: 44px !important;
   }
 }
 
@@ -2219,7 +2219,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs46 {
-    font-size: 43px !important;
+    font-size: 45px !important;
   }
 }
 
@@ -2228,7 +2228,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs47 {
-    font-size: 44px !important;
+    font-size: 46px !important;
   }
 }
 
@@ -2237,7 +2237,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs48 {
-    font-size: 45px !important;
+    font-size: 47px !important;
   }
 }
 
@@ -2246,7 +2246,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs49 {
-    font-size: 46px !important;
+    font-size: 48px !important;
   }
 }
 
@@ -2255,7 +2255,7 @@ html[lang=ar] .copy-item {
 }
 @media only screen and (max-width: 425px) {
   .fs50 {
-    font-size: 47px !important;
+    font-size: 49px !important;
   }
 }
 
@@ -4824,6 +4824,9 @@ html[lang=ar] .footer-left-img {
   justify-content: center;
   align-items: center;
 }
+.footer-icons .icon.main {
+  background-color: #c89f6b;
+}
 @media (max-width: 550px) {
   .footer-icons .icon {
     width: 38px;
@@ -4836,8 +4839,8 @@ html[lang=ar] .footer-left-img {
   border-radius: 50%;
 }
 .footer-icons .icon img {
-  max-width: 19px;
-  max-height: 19px;
+  max-width: 16px;
+  max-height: 16px;
 }
 
 /********************* Start Slider section *********************/
@@ -5007,6 +5010,11 @@ html[lang=en] .social-icon {
 }
 html[lang=ar] .social-icon {
   left: 0;
+}
+@media screen and (max-width: 425px) {
+  .social-icon {
+    display: none;
+  }
 }
 .social-icon .text {
   writing-mode: vertical-lr;
@@ -5542,6 +5550,8 @@ html[lang=ar] .customer_review .customer-img::after {
   .customer_review .content .text {
     max-height: -moz-fit-content;
     max-height: fit-content;
+    font-size: 12px;
+    margin-bottom: 25px;
   }
   .customer_review .content .name {
     font-size: 14px;
@@ -5989,6 +5999,12 @@ html[lang=ar] .gallary .gallary-item .fancybox-img {
     padding: 50px 0;
   }
 }
+@media screen and (max-width: 425px) {
+  .page-top .page-info {
+    padding: 40px 0;
+    flex-direction: column;
+  }
+}
 .page-top .page-info .page-head {
   font-size: 20px;
   color: #fff;
@@ -6393,4 +6409,72 @@ html[lang=ar] .services-details .services_det_img::after {
   }
 }
 
-/********************* End services-details section *********************//*# sourceMappingURL=main.css.map */
+/********************* End services-details section *********************/
+/********************* Start blog details section *********************/
+.blog_det_con {
+  background-color: #c89f6b;
+  color: #fff;
+  padding: 12px 20px;
+  display: flex;
+  gap: 15px 30px;
+  align-items: center;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+.blog_det_con .blog_date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.blog_det_con .blog_date i {
+  font-size: 12px;
+}
+
+.blog-img_d {
+  width: 100%;
+  height: 430px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 425px) {
+  .blog-img_d {
+    height: 280px;
+  }
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.comment .user_img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+.comment .name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.comment .text {
+  line-height: 1.8;
+  font-size: 13px;
+}
+@media screen and (max-width: 425px) {
+  .comment {
+    align-items: start;
+  }
+  .comment .user_img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  .comment .name {
+    font-size: 13px;
+  }
+}
+
+/********************* End blog details section *********************//*# sourceMappingURL=main.css.map */

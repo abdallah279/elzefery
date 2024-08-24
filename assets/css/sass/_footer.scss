@@ -406,6 +406,10 @@
     color: #fff;
     @include center;
 
+    &.main{
+      background-color: $main;
+    }
+
     @media (max-width: 550px) {
       @include shape(38px, 4px);
     }
@@ -416,8 +420,8 @@
     }
 
     img {
-      max-width: 19px;
-      max-height: 19px;
+      max-width: 16px;
+      max-height: 16px;
       // object-fit: cover;
     }
   }

@@ -1,4 +1,3 @@
-
 .page-navbar {
   padding: 10px 0;
   position: fixed;
@@ -8,11 +7,10 @@
   z-index: 888;
   background-color: transparent;
   transition: all 0.8s cubic-bezier(0.68, -0.3, 0.265, 1.3);
-  // box-shadow: $main-shadow;
 
   @media screen and (max-width: $screen-lg) {
     position: unset;
-    padding: 12px 0;
+    padding: 8px 0;
   }
 
   .navbar-content {
@@ -24,8 +22,8 @@
         max-height: 100px;
         transition: all 0.8s cubic-bezier(0.68, -0.3, 0.265, 1.3);
 
-        @media screen and (max-width: $screen-sm) {
-          max-width: 120px;
+        @media screen and (max-width: $screen-lg) {
+          max-width: 100px;
         }
       }
     }
@@ -37,48 +35,56 @@
       transition: all 0.8s cubic-bezier(0.68, -0.3, 0.265, 1.3);
       border-bottom: 1px solid rgba($color: #fff, $alpha: .2);
 
+      @media screen and (max-width: $screen-xl) {
+        gap: 20px;
+      }
+
       @media screen and (max-width:$screen-lg) {
-          position: fixed;
-          top: 0;
-          @include dir-left(0);
-          height: 100vh;
-          width: 280px;
-          flex-direction: column;
-          align-items: flex-start;
-          background-color: $white;
-          box-shadow: $nav-shadow;
-          z-index: 2000;
-          padding: 30px 20px;
-          gap: 8px;
-          #{$ltr} & {
-              transform: translateX(-150%);
-          }
-          #{$rtl} & {
-              transform: translateX(150%);
-          }
+        position: fixed;
+        top: 0;
+        @include dir-left(0);
+        height: 100vh;
+        width: 280px;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: $white;
+        box-shadow: $nav-shadow;
+        z-index: 2000;
+        padding: 30px 20px;
+        gap: 8px;
 
-          &.active{
-              transform: translateX(0) !important;
-          }
+        #{$ltr} & {
+          transform: translateX(-150%);
+        }
 
-          overflow-y: auto;
-          overflow-x: clip;
+        #{$rtl} & {
+          transform: translateX(150%);
+        }
 
-          &::-webkit-scrollbar {
-              width: 5px;
-          }
-          &::-webkit-scrollbar-track {
-              background: transparent;
-          }
-          &::-webkit-scrollbar-thumb {
-              border-radius: 25px;
-              background-color: $main;
-          }
+        &.active {
+          transform: translateX(0) !important;
+        }
+
+        overflow-y: auto;
+        overflow-x: clip;
+
+        &::-webkit-scrollbar {
+          width: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 25px;
+          background-color: $main;
+        }
       }
 
       .logo {
         display: none;
-        max-width: 80px;
+        max-width: 100px;
         max-height: 90px;
 
         img {
@@ -102,11 +108,7 @@
         transition: $main-transition;
         position: relative;
 
-        @media screen and (max-width:$screen-lg) {
-          width: 100%;
-        }
-
-        &::after{
+        &::after {
           position: absolute;
           bottom: -1px;
           left: 50%;
@@ -120,18 +122,47 @@
           @include border-radius(5px);
         }
 
-        i{
-            font-size: 8px;
+        i {
+          font-size: 8px;
         }
 
         :last-child {
           margin-left: 0;
         }
 
-        &:hover, &.active {
+        &:hover,
+        &.active {
           color: $main !important;
-          &::after{
-              opacity: 1;
+
+          &::after {
+            opacity: 1;
+          }
+          
+          @media screen and (max-width:$screen-lg) {
+            color: $white !important;
+  
+            &::after {
+              width: 100%;
+              z-index: -1;
+            }
+          }
+        }
+
+        @media screen and (max-width:$screen-lg) {
+          width: 100%;
+          color: $black;
+          height: 35px;
+          margin-bottom: 12px;
+          font-size: 13px;
+
+          &::after {
+            @include dir-left(-9px);
+            height: calc(100% + 6px);
+            width: 3px;
+            top: 50%;
+            transform: translateY(-50%) translateX(0);
+            bottom: unset;
+            // opacity: 1;
           }
         }
       }
@@ -151,29 +182,18 @@
       }
 
       .nav-ic {
-        @include circle(42px);
+        @include shape(35px);
         @include center;
-        background-color: $light;
+        background-color: $main;
         cursor: pointer;
         position: relative;
-
-        &.bell {
-          &::after {
-            content: "";
-            position: absolute;
-            @include circle(10px);
-            top: 5px;
-            @include dir-left(-2px);
-            background-color: $red;
-            border: 1px solid $white;
-          }
-        }
+        @extend .border_r1;
 
         .ic {
           max-width: 20px;
           max-height: 20px;
-          font-size: 18px;
-          color: $main;
+          font-size: 12px;
+          color: $white;
         }
       }
 
@@ -185,6 +205,14 @@
           display: flex;
         }
       }
+
+      .drop-text,
+      .drop-ic {
+        @media screen and (max-width: $screen-lg) {
+          color: $black;
+          font-size: 13px !important;
+        }
+      }
     }
   }
 
@@ -194,23 +222,25 @@
     box-shadow: $nav-shadow;
     background-color: $white;
 
-    .navbar-content {  
+    .navbar-content {
       .logo {
         .logo-img {
           max-width: 120px;
           max-height: 70px;
         }
       }
-  
+
       .links {
         .link {
           color: $dark;
         }
       }
-  
+
       .nav-icons {
-        .dropdown-toggle{
-          .drop-text, .drop-ic{
+        .dropdown-toggle {
+
+          .drop-text,
+          .drop-ic {
             color: $dark !important;
           }
         }

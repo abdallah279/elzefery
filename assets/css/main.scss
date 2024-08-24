@@ -12,10 +12,10 @@
     display: flex;
     align-items: center;
     min-height: 600px;
-    // padding-top: 100px;
 
     @media screen and (max-width: $screen-lg) {
-      height: 100vh;
+      height: 500px;
+      min-height: fit-content;
     }
 
     &::after {
@@ -26,7 +26,6 @@
       width: 100%;
       height: 100%;
       background-color: rgba($color: #0a1128, $alpha: 0.7);
-      // background: linear-gradient(0, rgba(0, 0, 0, .6), rgba($color: $main, $alpha: 0.5) 100%);
       z-index: -1;
     }
 
@@ -57,11 +56,11 @@
         color: $white;
 
         @media screen and (max-width: $screen-sm) {
-          font-size: 22px;
+          font-size: 20px;
         }
 
         @media screen and (max-width: $screen-xs) {
-          font-size: 20px;
+          font-size: 17px;
         }
       }
 
@@ -71,7 +70,7 @@
         text-align: center;
 
         @media screen and (max-width: $screen-xs) {
-          font-size: 15px;
+          font-size: 13px;
         }
       }
 
@@ -134,6 +133,10 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+
+    @media screen and (max-width: $screen-md) {
+      height: 30px;
+    }
   }
 
   &.top {
@@ -216,7 +219,7 @@
 
     @media screen and (max-width: $screen-xxs) {
       width: 290px;
-      height: 340px;
+      height: 290px;
     }
 
     &::before {
@@ -230,6 +233,10 @@
       z-index: -1;
       border-start-start-radius: 10px;
       border-start-end-radius: 40px;
+
+      @media screen and (max-width: $screen-xs) {
+        border-start-end-radius: 10px;
+      }
     }
 
     &::after {
@@ -237,11 +244,17 @@
       @include dir-left(-15px);
       position: absolute;
       bottom: -15px;
-      width: 80px;
-      height: 80px;
+      @include shape(80px);
       background-color: rgba(17, 22, 63, 0.3);
       z-index: -1;
       border-end-start-radius: 10px;
+
+      @media screen and (max-width: $screen-xs) {
+        // border-start-end-radius: 10px;
+        @include shape(60px);
+        bottom: -10px;
+        @include dir-left(-10px);
+      }
     }
 
     .img {
@@ -250,6 +263,10 @@
       object-fit: cover;
       border-start-start-radius: 10px;
       border-start-end-radius: 40px;
+
+      @media screen and (max-width: $screen-xs) {
+        border-start-end-radius: 10px;
+      }
     }
   }
 
@@ -262,8 +279,7 @@
 
       .icon {
         @include shape(34px, 0);
-        border-start-end-radius: 5px;
-        border-end-start-radius: 5px;
+        @extend .border_r1;
         background-color: $main;
         @include center;
         font-size: 13px;
@@ -305,7 +321,6 @@
     .text {
       font-size: 15px;
       color: $dark;
-      // margin: 18px 0;
       line-height: 1.7;
 
       @media screen and (max-width: $screen-sm) {
@@ -318,6 +333,7 @@
 /********************* End Before Crads section *********************/
 
 /********************* Start services-card section *********************/
+
 .main-cards {
   position: relative;
   z-index: 5;
@@ -330,27 +346,13 @@
 
 .services-card {
   position: relative;
-  height: 430px;
-  // overflow: hidden;
+  height: fit-content;
   z-index: 5;
   background-color: $white;
   padding: 7px;
   border-start-end-radius: 35px;
   border-start-start-radius: 10px;
   box-shadow: $main-shadow;
-
-  // &::after {
-  //   content: "";
-  //   height: 100%;
-  //   width: 100%;
-  //   top: 0;
-  //   left: 0;
-  //   position: absolute;
-  //   z-index: 1;
-  //   background-color: transparent;
-  //   background-image: linear-gradient(180deg, #ffffff00 0%, #0a1128 100%);
-  //   opacity: 1;
-  // }
 
   .image {
     width: 100%;
@@ -367,11 +369,9 @@
     }
   }
 
-
   .service-content {
-    // padding: 50px 35px 35px;
     transition: all 0.4s ease-in-out;
-    padding: 20px 10px;
+    padding: 20px 10px 35px;
     position: relative;
 
     .small_icon {
@@ -404,7 +404,7 @@
       bottom: 0px;
       @include dir-left(10px);
       margin-top: 0;
-      transform: translateY(100%);
+      transform: translateY(60%);
     }
 
     svg {
@@ -421,6 +421,22 @@
     .service-img {
       filter: grayscale(1) !important;
       transform: scale(1.2) rotate(3deg);
+    }
+  }
+
+  @media screen and (max-width: $screen-xs) {
+    .image {
+      height: 200px;
+    }
+
+    .service-content {
+      .service-name {
+        font-size: 14px;
+      }
+
+      .desc {
+        font-size: 13px;
+      }
     }
   }
 }
@@ -450,6 +466,7 @@
 /********************* End services-card section *********************/
 
 /********************* Strat owl Carousel *********************/
+
 .owl-nav {
   display: flex;
   gap: 7px;
@@ -459,8 +476,7 @@
   .owl-prev {
     @include shape(40px);
     @include center;
-    border-start-end-radius: 5px;
-    border-end-start-radius: 5px;
+    @extend .border_r1;
     border: 1px solid $main !important;
     background-color: $white !important;
     color: $main !important;
@@ -482,11 +498,9 @@
   .owl-dot {
     @include circle(7px);
     background-color: rgba($color: #272265, $alpha: 0.24) !important;
-    // opacity: .5;
     transition: $main-transition;
 
     &.active {
-      // opacity: 1;
       background-color: $main !important;
     }
   }
@@ -497,7 +511,6 @@
 /********************* Start After Crads section *********************/
 
 .after_cards {
-  // height: 460px;
   margin-top: -201px;
   padding-top: 280px;
   padding-bottom: 40px;
@@ -516,7 +529,6 @@
     width: 100%;
     height: 100%;
     background-color: rgba($color: #0a1128, $alpha: 0.7);
-    // background: linear-gradient(0, rgba(0, 0, 0, .6), rgba($color: $main, $alpha: 0.5) 100%);
     z-index: -1;
   }
 }
@@ -533,6 +545,10 @@
   @include center;
   box-shadow: $main-shadow;
   height: 120px;
+
+  @media screen and (max-width: $screen-xs) {
+    height: 105px;
+  }
 
   .brand-img {
     max-width: 100px;
@@ -574,7 +590,6 @@
 
 .customers_con {
   background-color: $white;
-  // border-radius: 8px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 5;
@@ -584,6 +599,11 @@
     position: absolute;
     bottom: 25px;
     @include dir-left(30px);
+
+    @media screen and (max-width: $screen-md) {
+      @include dir-left(unset);
+      @include dir-right(20px);
+    }
   }
 
   .owl-dots {
@@ -593,19 +613,28 @@
     @include dir-left(-30px);
     flex-direction: column;
     margin-top: 0;
+
+    @media screen and (max-width: $screen-md) {
+      top: unset;
+      bottom: -22px;
+      transform: translate(0);
+      @include dir-left(unset);
+      left: 50%;
+      transform: translateX(-50%);
+      flex-direction: row;
+    }
   }
+
 }
 
 .customer_review {
   padding: 30px;
   display: flex;
-  // align-items: center;
   justify-content: space-between;
   gap: 15px;
 
   .content {
     .text {
-      // color: $main;
       font-size: 13px;
       margin-bottom: 15px;
       line-height: 1.8;
@@ -647,6 +676,27 @@
       height: 100%;
       border: 3px solid $white;
       object-fit: cover;
+    }
+  }
+
+  @media screen and (max-width: $screen-md) {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+
+    .content {
+      .text {
+        max-height: fit-content;
+      }
+
+      .name {
+        font-size: 14px
+      }
+    }
+
+    .customer-img {
+      height: 200px;
+      width: 100%;
     }
   }
 }
@@ -743,6 +793,20 @@
       visibility: visible;
     }
   }
+
+  @media screen and (max-width: $screen-sm) {
+    height: 260px;
+
+    .team-content {
+      .name {
+        font-size: 14px;
+      }
+
+      .jop {
+        font-size: 12px;
+      }
+    }
+  }
 }
 
 /********************* End team-card section *********************/
@@ -766,6 +830,20 @@
   @include between;
   gap: 40px;
 
+  @media screen and (max-width: $screen-md) {
+    padding: 30px 20px;
+  }
+
+  @media screen and (max-width: $screen-xs) {
+    padding: 30px 15px;
+  }
+
+  @media screen and (max-width: $screen-lg) {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -774,14 +852,21 @@
     width: 100px;
     height: 100px;
     border: 2px solid rgba($color: $main, $alpha: .2);
-    // background-color: rgba($color: $main, $alpha: .2);
     border-start-end-radius: 15px;
     border-end-start-radius: 15px;
     z-index: -1;
+
+    @media screen and (max-width: $screen-sm) {
+      display: none;
+    }
   }
 
   .content {
     width: 640px;
+
+    @media screen and (max-width: $screen-lg) {
+      width: 100%;
+    }
 
     .title {
       font-size: 16px;
@@ -791,6 +876,10 @@
       align-items: center;
       gap: 7px;
 
+      @media screen and (max-width: $screen-lg) {
+        font-size: 15px;
+      }
+
       .sm-img {
         max-width: 20px;
         opacity: .5;
@@ -799,12 +888,15 @@
 
     .text {
       line-height: 1.9;
+
+      @media screen and (max-width: $screen-lg) {
+        font-size: 13px;
+      }
     }
   }
 }
 
 /********************* End legal_con section *********************/
-
 
 
 /********************* Start gallary section *********************/
@@ -819,7 +911,7 @@
   }
 
   .gallary-item {
-    height: 280px;
+    height: 220px;
     position: relative;
     transition: all 0.4s ease-in-out;
     margin-bottom: 15px;
@@ -834,7 +926,6 @@
       @include dir-right(20px);
       background: $main !important;
       z-index: 3;
-      // color: $white !important;
       overflow: hidden;
       border: 1px solid $main;
     }
@@ -843,7 +934,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      // filter: grayscale(.5);
       transition: all 0.4s ease-in-out;
       border-start-end-radius: 14px;
       border-end-start-radius: 14px;
@@ -857,18 +947,83 @@
 
 /********************* End gallary section *********************/
 
+
+/********************* Start Video section *********************/
+
+.video-card {
+  background-color: $white;
+  border-start-end-radius: 14px;
+  border-end-start-radius: 14px;
+  overflow: hidden;
+  box-shadow: $main-shadow;
+
+  .video-container {
+    width: 100%;
+    height: 220px;
+    position: relative;
+
+    .player-con {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgb(0 0 0 / 50%);
+      z-index: 1;
+      @include center;
+      /* cursor: pointer; */
+
+      &:hover {
+        .play-v {
+          @include shape(45px);
+          background-color: $main;
+          outline-color: #f6731191;
+        }
+      }
+    }
+
+    .play-v {
+      background-color: rgba($color: $main, $alpha: 0.8);
+      font-size: 15px;
+      @include shape(40px);
+      color: #fff;
+      cursor: pointer;
+      @include center;
+      outline: 5px solid transparent;
+      transition: $main-transition;
+      @extend .border_r1;
+    }
+  }
+
+  .video {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/********************* End video section *********************/
+
+
 /********************* start Contact section *********************/
 
 .contact-sec {
   margin-top: -200px;
   position: relative;
   z-index: 5;
+
+  @media screen and (max-width: $screen-lg) {
+    margin-top: 0;
+  }
 }
 
 .map {
   width: 100%;
   height: 432px;
   border-radius: 15px;
+
+  @media screen and (max-width: $screen-lg) {
+    height: 300px;
+  }
 }
 
 .contact-style {
@@ -880,8 +1035,9 @@
   border-start-end-radius: 50px;
   border-end-start-radius: 50px;
 
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: $screen-lg) {
     padding: 30px 20px;
+    border-radius: 0;
   }
 }
 
@@ -993,145 +1149,35 @@
   }
 
   .page-info {
-    padding: 180px 0 80px;
-    @include center;
-    flex-direction: column;
+    padding: 180px 0 50px;
+    @include between;
     flex-wrap: wrap;
     gap: 20px;
 
-    @media screen and (max-width: $screen-xs) {
-      padding-top: 155px;
-      padding-bottom: 35px;
+    @media screen and (max-width: $screen-lg) {
+      padding: 50px 0;
     }
 
     .page-head {
-      font-size: 22px;
+      font-size: 20px;
       color: $white;
 
       @media screen and (max-width: $screen-xs) {
-        font-size: 18px;
+        font-size: 16px;
       }
     }
 
     &.lg {
       padding: 180px 0 220px;
+
+      @media screen and (max-width: $screen-lg) {
+        padding: 50px 0;
+      }
     }
   }
 }
 
 /********************* End page-header section *********************/
-
-
-/********************* Start our_vision section *********************/
-.our_vision_card {
-  text-align: center;
-  // overflow: hidden;
-  padding: 20px;
-  position: relative;
-  box-shadow: $main-shadow;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    width: 70px;
-    height: 3px;
-    background-color: #ffe7dd;
-    z-index: 2;
-    transition: $main-transition;
-  }
-
-  &::before {
-    top: 0;
-    right: 0;
-  }
-
-  &::after {
-    bottom: 0;
-    left: 0;
-  }
-
-  .our_vision_icon {
-    position: relative;
-    font-size: 24px;
-    background-color: #fef4f0;
-    color: $main;
-    width: 70px;
-    height: 70px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1.2px;
-    -webkit-text-stroke-color: $main;
-    transition: all 0.31s ease-in-out;
-    margin-bottom: 18px;
-
-    &::after {
-      position: absolute;
-      content: "";
-      top: 0;
-      height: 3px;
-      width: 28px;
-      background-color: $main;
-      transition: all 0.31s ease-in-out;
-    }
-  }
-
-  .our_vision_name {
-    color: #101010;
-    font-size: 18px;
-    margin-bottom: 18px;
-    line-height: 1.4;
-    font-weight: 600;
-  }
-
-  .desc {
-    font-size: 15px;
-    color: #101010;
-  }
-
-  .our_vision_list {
-    list-style: inside;
-    text-align: start;
-
-    .list_item {
-      font-size: 15px;
-      color: #101010;
-      margin-bottom: 16px;
-      line-height: 1.7;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  &:hover {
-    .our_vision_icon {
-      background-color: $main;
-      color: $white;
-      -webkit-text-stroke-color: $white;
-
-      &::after {
-        background-color: $white;
-      }
-
-      &::before {
-        -webkit-text-stroke-color: $white;
-      }
-    }
-
-    &::before,
-    &::after {
-      width: 100%;
-      // background-color: $main;
-    }
-
-  }
-}
-
-/********************* End our_vision section *********************/
 
 
 /********************* Start numbers section *********************/
@@ -1161,7 +1207,6 @@
     gap: 30px;
 
     @media screen and (max-width: $screen-sm) {
-      //   justify-content: start;
       gap: 20px;
     }
 
@@ -1172,8 +1217,7 @@
       padding: 20px 25px;
       position: relative;
       z-index: 2;
-      border-start-end-radius: 7px;
-      border-end-start-radius: 7px;
+      @extend .border_r2;
 
       @media screen and (max-width: $screen-xs) {
         padding: 20px 15px;
@@ -1207,7 +1251,7 @@
         margin-bottom: 10px;
 
         @media screen and (max-width: $screen-sm) {
-          font-size: 20px;
+          font-size: 18px;
         }
       }
 
@@ -1215,7 +1259,7 @@
         font-size: 16px;
 
         @media screen and (max-width: $screen-sm) {
-          font-size: 15px;
+          font-size: 14px;
         }
       }
     }
@@ -1223,3 +1267,313 @@
 }
 
 /********************* End numbers section *********************/
+
+
+/********************* Start blog_con section *********************/
+
+.blog_con {
+  display: flex;
+  align-items: start;
+  gap: 50px;
+
+  @media screen and (max-width: $screen-lg) {
+    flex-direction: column-reverse;
+  }
+
+  .blog_sidebar {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid $border-input;
+    @extend .border_r2;
+    position: sticky;
+    top: 100px;
+    flex-shrink: 0;
+    @include dir-left(0);
+    height: fit-content;
+
+    @media screen and (max-width: $screen-lg) {
+      width: 100%;
+    }
+
+    .title {
+      font-size: 15px;
+      color: $black;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .blog_items {
+      .blog_item {
+        display: block;
+        padding: 14px;
+        font-size: 13px;
+        color: $black;
+        background-color: #f5f5f5;
+        width: 100%;
+        margin-bottom: 10px;
+        @extend .border_r2;
+        transition: $main-transition;
+        text-align: start;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:hover {
+          background-color: $main;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.blog_card {
+  position: relative;
+  height: fit-content;
+  z-index: 5;
+  background-color: $white;
+  padding: 7px;
+  border-start-end-radius: 20px;
+  border-end-start-radius: 20px;
+  box-shadow: $main-shadow;
+
+  .blog_date {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    top: 20px;
+    @include dir-left(17px);
+    background-color: $main;
+    padding: 7px 15px;
+    border-radius: 50px;
+    color: $white;
+    font-size: 12px;
+    z-index: 8;
+
+    &.user {
+      @include dir-left(unset);
+      @include dir-right(17px);
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    border-start-end-radius: 20px;
+    border-end-start-radius: 20px;
+
+    @media screen and (max-width: $screen-xs) {
+      height: 200px;
+    }
+
+    .blog-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 600ms linear;
+    }
+  }
+
+
+  .blog-content {
+    transition: all 0.4s ease-in-out;
+    padding: 20px 10px 10px;
+    position: relative;
+
+    .blog-name {
+      color: $dark;
+      font-size: 15px;
+      margin-bottom: 15px;
+      line-height: 1.4;
+      font-weight: 600;
+
+      @media screen and (max-width: $screen-xs) {
+        font-size: 14px;
+      }
+    }
+
+    .desc {
+      font-size: 13px;
+      color: $text-color;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    .main-btn {
+      transition: all 0.4s ease-in-out;
+
+      &:hover {
+        background-color: $white;
+        color: $main;
+      }
+    }
+  }
+
+  &:hover {
+    .blog-img {
+      filter: grayscale(1) !important;
+      transform: scale(1.2) rotate(3deg);
+    }
+  }
+}
+
+/********************* End blog_con section *********************/
+
+
+/********************* Start FAQ section *********************/
+
+.faq-collapse {
+  margin-bottom: 15px;
+
+  .faq-open {
+    @include between;
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+    color: $black;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: $main-transition;
+    border-start-end-radius: 12px;
+    border-end-start-radius: 12px;
+
+    @media screen and (max-width: $screen-xs) {
+      font-size: 13px;
+    }
+
+    i {
+      transition: $main-transition;
+      font-size: 13px;
+    }
+  }
+
+  .faq-content {
+    padding: 15px 25px;
+    background-color: #FAFAFA;
+    color: $black;
+    font-size: 14px;
+    line-height: 1.9;
+    display: none;
+
+  }
+
+  &.active {
+
+    .faq-open {
+      background-color: $main;
+      color: #fff;
+
+      i {
+        transform: rotateX(180deg);
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:600px) {
+
+  .faq-collapse {
+    .faq-open {
+      padding: 15px;
+    }
+
+    .faq-content {
+      padding: 15px;
+      font-size: 13px !important;
+    }
+  }
+}
+
+
+.faq-item {
+  background-color: #f9f9f9;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+}
+
+/********************* End FAQ section *********************/
+
+/********************* Start services-details section *********************/
+
+.services-details {
+  display: flex;
+  gap: 50px;
+
+  @media screen and (max-width: $screen-lg) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services_det_img {
+    width: 380px;
+    height: 400px;
+    position: relative;
+    flex-shrink: 0;
+    z-index: 2;
+
+    @media screen and (max-width: $screen-xs) {
+      width: 325px;
+      height: 380px;
+    }
+
+    @media screen and (max-width: $screen-xxs) {
+      width: 290px;
+      height: 290px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      z-index: -1;
+      transition: $main-transition;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: $main, $alpha: .3);
+      pointer-events: none;
+      @extend .border_r2;
+    }
+
+    &::before {
+      top: 15px;
+      @include dir-right(15px);
+    }
+
+    &::after {
+      top: -15px;
+      @include dir-left(15px);
+    }
+
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @extend .border_r2;
+
+    }
+  }
+
+  .text {
+    line-height: 1.9;
+    font-size: 14px;
+
+    @media screen and (max-width: $screen-xs) {
+      font-size: 13px;
+    }
+  }
+}
+
+/********************* End services-details section *********************/

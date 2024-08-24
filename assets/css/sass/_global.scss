@@ -48,7 +48,7 @@ html {
 
 body {
   font-family: fontMed;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-size: 14px !important;
   
   @include devices(xs){
@@ -65,10 +65,10 @@ body {
   }
 }
 
-// section{
-//   overflow-x: hidden;
-//   overflow-y: clip;
-// }
+section{
+  overflow-x: hidden;
+  overflow-y: clip;
+}
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {

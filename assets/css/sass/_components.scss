@@ -155,7 +155,7 @@
   pointer-events: none;
 
   @media screen and (max-width: $screen-lg) {
-    background-color: rgba($color: #000000, $alpha: 0.7);
+    background-color: rgba($color: #000000, $alpha: 0.5);
     pointer-events: auto;
   }
 }
@@ -279,9 +279,9 @@
     @include grid(210px, 20px);
   }
 
-  @media screen and (max-width: 510px) {
-    @include grid(150px, 15px);
-  }
+  // @media screen and (max-width: 510px) {
+  //   @include grid(150px, 15px);
+  // }
 }
 
 .grid-3 {
@@ -364,7 +364,7 @@
   }
 }
 
-.bg_small{
+.bg_small {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -376,12 +376,71 @@
   // max-width: 300px;
 }
 
-.bg_left{
+.bg_left {
   position: absolute;
   top: 0;
-  @include dir-left(0);
-  opacity: .5;
+  @include dir-left(2px);
+  opacity: .6;
   max-width: 200px;
+  z-index: -1;
+}
+
+
+
+// Whatsapp
+.floating-button {
+  position: fixed;
+  bottom: 25px;
+  @include dir-left(30px);
+  @include circle(50px);
+  background-color: #25d366;
+  color: white !important;
+  @include center;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 25;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 1px solid #58ea00;
+    left: -7px;
+    right: -7px;
+    top: -7px;
+    bottom: -7px;
+    border-radius: 50%;
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+  }
+
+  &:after {
+    animation-delay: .5s;
+  }
+
+  @media screen and (max-width: $screen-xs) {
+    @include dir-left(12px);
+    bottom: 15px;
+    @include circle(44px);
+    font-size: 15px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
 }
 
 /********************* Tabs *********************/
@@ -522,7 +581,7 @@
       position: relative;
       z-index: 10;
       background-color: $white;
-      border: 2px solid $border-color;
+      border: 2px solid $border-input;
     }
 
     .progress-label {
@@ -635,7 +694,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    font-size: 13px;
+    font-size: 14px;
     color: $white;
 
     &.active {
@@ -644,6 +703,14 @@
 
     i {
       font-size: 11px;
+    }
+
+    a {
+      transition: $main-transition;
+
+      &:hover {
+        color: $main;
+      }
     }
   }
 }
@@ -708,6 +775,10 @@
   text-transform: uppercase;
   line-height: 1.2;
   z-index: 1;
+
+  @media screen and (max-width: $screen-xs) {
+    font-size: 15px;
+  }
 
   &.lg {
     line-height: 1;
@@ -974,6 +1045,16 @@
   text-decoration: line-through;
 }
 
+.border_r1 {
+  border-start-end-radius: 5px;
+  border-end-start-radius: 5px;
+}
+
+.border_r2 {
+  border-start-end-radius: 7px;
+  border-end-start-radius: 7px;
+}
+
 /********************* Buttons *********************/
 
 .up {
@@ -1067,8 +1148,7 @@
   color: $white;
   font-size: 13px;
   height: 44px;
-  border-start-end-radius: 7px;
-  border-end-start-radius: 7px;
+  @extend .border_r2;
   cursor: pointer;
   transition: $main-transition;
   overflow: hidden;
@@ -1204,7 +1284,7 @@
   @include center;
   gap: 10px;
   background-color: $white2;
-  border: 1px solid $border-color;
+  border: 1px solid $border-input;
   color: $main;
   font-size: 13px;
   cursor: pointer;
@@ -1293,9 +1373,8 @@
 
 .small_icon {
   @include center;
-  @include shape(40px, 0);
-  border-end-start-radius: 5px;
-  border-start-end-radius: 5px;
+  @include shape(40px);
+  @extend .border_r1;
   background: linear-gradient(0, rgba($color: $black, $alpha: .9), rgba($color: $main, $alpha: 1) 100%);
   color: $white;
 
@@ -1303,7 +1382,7 @@
     max-width: 20px;
   }
 
-  &.main{
+  &.main {
     background: $main !important;
   }
 }
@@ -1585,7 +1664,7 @@
 }
 
 .main-border {
-  border: 1px solid $border-color;
+  border: 1px solid $border-input;
 }
 
 .main-border-b {
@@ -2288,7 +2367,7 @@
     transition: $main-transition;
     position: relative;
     flex-shrink: 0;
-    border: 1px solid $border-color;
+    border: 1px solid $border-input;
 
     &::after {
       content: "\f00c";
@@ -2565,7 +2644,7 @@
   // margin-top: 10px;
   width: fit-content;
   cursor: pointer;
-  background-color: $border-color;
+  background-color: $border-input;
   position: relative;
 
   .close {
@@ -2757,7 +2836,7 @@
 }
 
 .modal::-webkit-scrollbar-track {
-  background: $border-color;
+  background: $border-input;
 }
 
 .modal::-webkit-scrollbar-thumb {
@@ -3032,58 +3111,6 @@
 }
 
 /********************* Accordion *********************/
-
-/********************* Start FAQ section *********************/
-.faq-collapse {
-  margin-bottom: 15px;
-  font-family: fontReg;
-
-  .faq-open {
-    @include between;
-    padding: 12px 20px;
-    background-color: #fff;
-    border: 1px solid $black;
-    color: $black;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: $main-transition;
-
-    i {
-      transition: $main-transition;
-    }
-
-    @media screen and (max-width: $screen-xs) {
-      font-size: 15px;
-      padding: 12px;
-    }
-  }
-
-  &.active {
-    .faq-open {
-      background-color: $black;
-      color: #fff;
-
-      i {
-        transform: rotateX(180deg);
-      }
-    }
-  }
-
-  .faq-content {
-    padding: 15px 20px;
-    color: $black;
-    font-size: 15px;
-    line-height: 1.7;
-    display: none;
-    font-family: fontReg;
-
-    @media screen and (max-width: $screen-xs) {
-      font-size: 14px;
-      padding: 12px 15px;
-    }
-  }
-}
 
 /********************* dropdown *********************/
 .dropdown-menu {

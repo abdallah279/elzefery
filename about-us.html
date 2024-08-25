@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="./assets/plugins/OwlCarousel2-2.3.4/dist_2/assets/owl.theme.default.min.css">
     <!-- fancybox -->
     <link rel="stylesheet" href="./assets/plugins/FancyBox/jquery.fancybox.min.css">
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
     <!-- Animate -->
     <link rel="stylesheet" href="./assets/css/animate.css">
     <!-- Style Css -->
@@ -140,12 +142,18 @@
                     <img loading="lazy" src="./assets/imgs/slider.webp" alt="" class="img">
                 </div>
                 <div class="content">
-                    <h4 class="main-title c-dark wow fadeInDown">
-                        <div class="small_icon main">
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="small_icon main wow fadeInRight">
                             <img loading="lazy" src="./assets/imgs/icons/lawyer.png" class="img" alt="">
                         </div>
-                        عن المكتب
-                    </h4>
+                        <h4 class="main-title mb-0 wow fadeInDown">
+                            عن المكتب
+                            <span class="line"></span>
+                        </h4>
+                    </div>
+                    <h5 class="c-dark fw-semibold fs14 wow fadeInUp mb-4">
+                        مكتب محاماة مرخص من وزارة العدل ترخيص رقم 34/161 خبرة أكثر من 20 عام
+                    </h5>
                     <p class="text wow fadeInLeft">
                         ندرس القضايا ونقدم الاستشارات القانونية في القضايا الجنائية - القضايا الحقوقية -القضايا التجارية
                         - قضايا الشركات - قضايا الأحوال الشخصية -القضايا الإدارية- القضايا العُمالية - صياغة اللوائح
@@ -164,6 +172,103 @@
     <!-- End About Section -->
 
 
+    <!-- Start About Tabs Section -->
+    <section class="about_tabs_sec main-padding mb-5 position-relative">
+        <img loading="lazy" src="./assets/imgs/we_are_layout_2.png" alt="" class="bg_left left">
+        <div class="container">
+
+            <div class="about-right-flex">
+
+                <!-- Tabs -->
+                <div class="about-tabs-container about-collapse active wow fadeInRight">
+                    <div class="about-title about-open active">
+                        عن المكتب
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="about-tabs about-content-tab not-after">
+                        <div class="about-tab  tabs-m active" data-show="Our-values">قيمنا</div>
+                        <div class="about-tab tabs-m" data-show="integrity">النزاهة</div>
+                        <div class="about-tab tabs-m" data-show="responsibility">المسئولية</div>
+                        <div class="about-tab tabs-m" data-show="bravery">الشجاعة</div>
+                        <div class="about-tab tabs-m" data-show="determination">التفاني والعزيمة</div>
+                        <div class="about-tab tabs-m" data-show="Commitment">الالتزام </div>
+                    </div>
+                </div>
+
+                <!-- قيمنا -->
+                <div class="about-item tabs-show Our-values">
+
+                    <h5 class="fs14 fw-semibold mb-3 wow fadeInDown">قيمنا</h5>
+                    <p class="text wow fadeInUp">
+                        يتعامل مكتب الظفيري للمحاماة
+                        والاستشارات القانونية و الشرعية مباشرة مع الشركات الحكومية والسلطات القضائية بشكل يومي لتقــديم
+                        أفضل الخدمـات لعملائنـا بمـا في ذلك الهيئة العامة للاستثمار وهيئة سوق المال السعودية ووزارة
+                        التجارة والاستثمار وصندوق الاستثمارات العامة ووزارة العمل ووزارة العــدل ووزارة المـالية
+                        والهيئات القضائية بالإضافة إلى عدد كبيـر من الهيئـات السعــودية
+                    </p>
+
+                </div>
+
+                <!-- النزاهة -->
+                <div class="about-item tabs-show integrity">
+
+                    <h5 class="fs14 fw-semibold mb-3">النزاهة</h5>
+                    <p class="text">
+                        في مكتب الظفيري للمحاماة والاستشارات القانونية يوجد العديد من المحامين المتخصصين الذين يستطيعون
+                        بنزاهة وشرف ويهتم بثقة عملائه يوميا بعد يوم وبكافة العمل المنجز وعلى مستوى الأفراد والشركات
+                    </p>
+
+                </div>
+
+                <!-- المسئولية -->
+                <div class="about-item tabs-show responsibility">
+
+                    <h5 class="fs14 fw-semibold mb-3">المسئولية</h5>
+                    <p class="text">
+                        يعتمد المكتب في كافة خطواته لإنجاز العمل حس المسئولية ومحاسبة النفس العالية والمستمرة
+                    </p>
+
+                </div>
+
+                <!-- الشجاعة -->
+                <div class="about-item tabs-show bravery">
+
+                    <h5 class="fs14 fw-semibold mb-3">الشجاعة</h5>
+                    <p class="text">
+                        يتبنى المكتب تدعيم روح الشجاعة في إتخاذ القرارات الملائمةوتقديم الخدمات القانونية الملائمةأمام
+                        المواقف الصعبة والمعقدة
+                    </p>
+
+                </div>
+
+                <!-- التفاني والعزيمة -->
+                <div class="about-item tabs-show determination">
+
+                    <h5 class="fs14 fw-semibold mb-3">التفاني والعزيمة</h5>
+                    <p class="text">
+                        التفاني والعزيمة هما عنوان أعمالنا وسبيلنا الى تقديم خدمات قانونية تتميز بالكفاءة والتميز
+                    </p>
+
+                </div>
+
+                <!-- الالتزام -->
+                <div class="about-item tabs-show Commitment">
+
+                    <h5 class="fs14 fw-semibold mb-3">الالتزام</h5>
+                    <p class="text">
+                        نلتزم بقيم مكتب الظفيري للمحاماة بوصفها واحدة من الشركات الرائدة في تقديم الهدمات المهنية والتي
+                        تضم أفراداً تجمعهم قيم وطموحات مهنية واحدة
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End About Tabs Section -->
+
+
     <!-- Start Our Numbers -->
     <section class="our-numbers main-padding" style="background-image: url('./assets/imgs/slider2.jpg')">
         <div class="container">
@@ -172,32 +277,32 @@
 
                 <div class="number-item wow fadeInLeft">
                     <img loading="lazy" src="./assets/imgs/icons/lawyer.png" class="img" alt="">
-                    <div class="num">1500</div>
-                    <div class="text">عدد زيارات الموقع</div>
+                    <div class="num">240</div>
+                    <div class="text">القضايا التجارية</div>
                 </div>
 
                 <div class="number-item wow fadeInLeft">
                     <img loading="lazy" src="./assets/imgs/icons/lawyer.png" class="img" alt="">
-                    <div class="num">300</div>
-                    <div class="text">عدد العملاء</div>
+                    <div class="num">3689</div>
+                    <div class="text">قضايا الأحوال الشحصية</div>
                 </div>
 
                 <div class="number-item wow fadeInLeft">
                     <img loading="lazy" src="./assets/imgs/icons/lawyer.png" class="img" alt="">
-                    <div class="num">700</div>
-                    <div class="text">عدد الخدمات</div>
+                    <div class="num">4847</div>
+                    <div class="text">القضايا الجنائية</div>
                 </div>
 
                 <div class="number-item wow fadeInLeft">
                     <img loading="lazy" src="./assets/imgs/icons/lawyer.png" class="img" alt="">
-                    <div class="num">1500</div>
-                    <div class="text">عدد زيارات الموقع</div>
+                    <div class="num">1254</div>
+                    <div class="text">القضايا العامة</div>
                 </div>
 
                 <div class="number-item wow fadeInLeft">
                     <img loading="lazy" src="./assets/imgs/icons/lawyer.png" class="img" alt="">
-                    <div class="num">300</div>
-                    <div class="text">عدد العملاء</div>
+                    <div class="num">1943</div>
+                    <div class="text">القضايا الإدارية</div>
                 </div>
 
             </div>
@@ -253,7 +358,7 @@
                     </p>
                 </div>
 
-                <a href="contact-us.html" class="main-btn lg up wow fadeInLeft">
+                <a href="request-consultation.html" class="main-btn lg up wow fadeInLeft">
                     للاستشارات القانونية
                 </a>
 
@@ -282,31 +387,6 @@
                 </div>
                 <div class="col-12 col-lg-2 col-md-6 mb-4">
                     <div class="footer-links">
-                        <p class="foot-title">خدماتنا</p>
-                        <div class="links">
-                            <a href="#" class="act-befor">
-                                <i class="fas fa-angle-double-left"></i>
-                                <span>اسم الخدمة</span></a>
-                            <a href="#" class="act-befor">
-                                <i class="fas fa-angle-double-left"></i>
-                                <span>اسم الخدمة</span></a>
-                            <a href="#" class="act-befor">
-                                <i class="fas fa-angle-double-left"></i>
-                                <span>اسم الخدمة</span></a>
-                            <a href="#" class="act-befor">
-                                <i class="fas fa-angle-double-left"></i>
-                                <span>اسم الخدمة</span></a>
-                            <a href="#" class="act-befor">
-                                <i class="fas fa-angle-double-left"></i>
-                                <span>اسم الخدمة</span></a>
-                            <a href="#" class="act-befor">
-                                <i class="fas fa-angle-double-left"></i>
-                                <span>اسم الخدمة</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-2 col-md-6 mb-4">
-                    <div class="footer-links">
                         <p class="foot-title">روابط سريعه</p>
                         <div class="links">
                             <a href="index.html" class="act-befor">
@@ -329,9 +409,32 @@
                                 <i class="fas fa-angle-double-left"></i>
                                 <span>الاسئلة المتكررة</span>
                             </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-2 col-md-6 mb-4">
+                    <div class="footer-links">
+                        <p class="foot-title">روابط سريعه</p>
+                        <div class="links">
+                            <a href="our-team.html" class="act-befor">
+                                <i class="fas fa-angle-double-left"></i>
+                                <span>فريق العمل</span>
+                            </a>
                             <a href="contact-us.html" class="act-befor">
                                 <i class="fas fa-angle-double-left"></i>
                                 <span>اتصل بنا</span>
+                            </a>
+                            <a href="privacy.html" class="act-befor">
+                                <i class="fas fa-angle-double-left"></i>
+                                <span>الخصوصية</span>
+                            </a>
+                            <a href="terms.html" class="act-befor">
+                                <i class="fas fa-angle-double-left"></i>
+                                <span>الشروط والأحكام</span>
+                            </a>
+                            <a href="company-certificates.html" class="act-befor">
+                                <i class="fas fa-angle-double-left"></i>
+                                <span>شهادات الشركة</span>
                             </a>
                         </div>
                     </div>
@@ -388,6 +491,8 @@
     <script src="./assets/plugins/OwlCarousel2-2.3.4/dist_2/owl.carousel.min.js"></script>
     <!-- fancybox -->
     <script src="./assets/plugins/FancyBox/jquery.fancybox.min.js"></script>
+    <!-- Select 2 -->
+    <script src="./assets/plugins/select2/select2.js"></script>
     <!-- Poppers -->
     <script src="./assets/js/popper.min.js"></script>
     <!-- Wow -->

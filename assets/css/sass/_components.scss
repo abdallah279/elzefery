@@ -768,6 +768,16 @@
 }
 
 /********************* Titles *********************/
+.content_title{
+  @media screen and (max-width: $screen-xs) {
+    text-align: center;
+
+    .main-title{
+      margin-inline: auto;
+    }
+  }
+}
+
 .main-title {
   position: relative;
   display: block;

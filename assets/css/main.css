@@ -1034,6 +1034,15 @@ html[lang=ar] .iti--separate-dial-code .iti__flag-container {
 }
 
 /********************* Titles *********************/
+@media screen and (max-width: 425px) {
+  .content_title {
+    text-align: center;
+  }
+  .content_title .main-title {
+    margin-inline: auto;
+  }
+}
+
 .main-title {
   position: relative;
   display: block;
@@ -4015,7 +4024,7 @@ html[lang=ar] .footer-left-img {
 }
 @media screen and (max-width: 425px) {
   .home-sec .home-item .content .title {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 .home-sec .home-item .content .desc {
@@ -4149,7 +4158,7 @@ html[lang=ar] .social-icon {
 .about-content {
   display: flex;
   align-items: center;
-  gap: 65px;
+  gap: 50px 65px;
 }
 @media screen and (max-width: 992px) {
   .about-content {

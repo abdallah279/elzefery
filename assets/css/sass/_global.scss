@@ -113,10 +113,11 @@ i {
 }
 
 p {
-  color: $light3;
+  color: $dark;
   margin: 0;
   font-size: 1em;
   font-weight: 500;
+  line-height: 2;
 }
 input:focus::placeholder {
   color: transparent;

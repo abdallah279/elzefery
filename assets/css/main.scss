@@ -292,9 +292,9 @@
     }
 
     .text {
-      color: rgb(0 55 49 / 60%);
-      font-size: 15px;
-      line-height: 1.8;
+      // color: rgb(0 55 49 / 60%);
+      font-size: 14px;
+      line-height: 2;
       margin-bottom: 18px;
 
       @include devices(xs) {
@@ -772,9 +772,8 @@
 
   .brand-img {
     max-width: 100px;
-    filter: grayscale(100%);
     transition: all ease 0.31s;
-    opacity: 0.6;
+    opacity: 0.8;
 
     @media screen and (max-width: $screen-xs) {
       max-width: 85px;
@@ -798,7 +797,7 @@
 
   &:hover {
     .brand-img {
-      filter: grayscale(0);
+      filter: grayscale(100%);
       opacity: 1;
     }
   }

@@ -296,6 +296,7 @@
       font-size: 14px;
       line-height: 2;
       margin-bottom: 18px;
+      text-align: justify;
 
       @include devices(xs) {
         font-size: 13px;

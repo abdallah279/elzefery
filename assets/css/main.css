@@ -4276,6 +4276,7 @@ html[lang=ar] .about-content .about-img::after {
   font-size: 14px;
   line-height: 2;
   margin-bottom: 18px;
+  text-align: justify;
 }
 @media only screen and (max-width: 425px) {
   .about-content .content .text {

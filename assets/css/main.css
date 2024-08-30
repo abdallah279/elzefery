@@ -4729,6 +4729,9 @@ html[lang=ar] .team-slider .owl-nav {
   position: relative;
   overflow: hidden;
 }
+.client-item.two .brand-img {
+  max-width: 120px;
+}
 .client-item.two::after {
   content: "";
   position: absolute;
@@ -4818,7 +4821,7 @@ html[lang=ar] .customers_con .owl-dots {
   line-height: 1.8;
   max-height: 150px;
   overflow-y: auto;
-  padding-inline: 12px;
+  padding-inline-end: 12px;
 }
 .customer_review .content .text::-webkit-scrollbar {
   width: 3px;

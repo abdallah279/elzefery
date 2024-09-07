@@ -2045,7 +2045,7 @@
   .sec-icon {
     position: absolute;
     top: 0;
-    @include dir-right(14px);
+    @include dir-left(14px);
     // background-color: $main;
     font-size: 13px;
     pointer-events: none;
@@ -2054,6 +2054,12 @@
     border: none;
     outline: none;
     color: #3baeaa;
+  }
+
+  &.sec{
+    .input-me{
+      padding-inline-start: 35px;
+    }
   }
 }
 
@@ -2345,7 +2351,9 @@
       border-radius: 5px;
 
       .ic {
-        max-width: 17px;
+        width: 23px;
+        height: 16px;
+        border-radius: 3px;
       }
 
       &.red {

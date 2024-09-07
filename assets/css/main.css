@@ -2713,10 +2713,13 @@ html[lang=ar] .main-input .main-icon {
   color: #3baeaa;
 }
 html[lang=en] .main-input .sec-icon {
-  right: 14px;
+  left: 14px;
 }
 html[lang=ar] .main-input .sec-icon {
-  left: 14px;
+  right: 14px;
+}
+.main-input.sec .input-me {
+  padding-inline-start: 35px;
 }
 
 /********************* Select Two *********************/
@@ -3066,7 +3069,9 @@ html[lang=ar] .dropdown-menu.left.show {
   border-radius: 5px;
 }
 .dropdown-menu.drop-lang .lang-item .ic {
-  max-width: 17px;
+  width: 23px;
+  height: 16px;
+  border-radius: 3px;
 }
 .dropdown-menu.drop-lang .lang-item.red {
   color: #D44A4A !important;
@@ -5239,6 +5244,15 @@ html[lang=ar] .gallary .gallary-item .fancybox-img {
   padding: 15px;
   color: #fff;
   flex-wrap: wrap;
+}
+.contact_box .name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.contact_box .name i {
+  margin-top: 3px;
 }
 
 /********************* End Contact section *********************/

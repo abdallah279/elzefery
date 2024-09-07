@@ -1307,6 +1307,15 @@
   padding:  15px;
   color: $white;
   flex-wrap: wrap;
+
+  .name{
+    @include center;
+    gap: 7px;
+
+    i{
+      margin-top: 3px;
+    }
+  }
 }
 
 /********************* End Contact section *********************/

@@ -1901,6 +1901,16 @@
       font-size: 14px;
       font-weight: 600;
       margin-bottom: 10px;
+      transition: $main-transition;
+
+      &.link_l{
+        display: block;
+        text-align: center;
+        font-size: 13px;
+        &:hover{
+          color: $main;
+        }
+      }
     }
 
     .text {
@@ -1911,3 +1921,15 @@
 }
 
 /********************* End certificate_card section *********************/
+
+/********************* Start Book section *********************/
+.ipgs-flipbook {
+  direction: ltr;
+  height: 500px !important;
+  width: 680px !important;
+  margin: auto !important;
+  @media screen and (max-width: $screen-lg) {
+    width: 100% !important;
+  }
+}
+/********************* End Book section *********************/

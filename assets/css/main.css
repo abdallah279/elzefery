@@ -1297,7 +1297,7 @@ html[lang=ar] .copy-item {
   border-end-start-radius: 5px;
 }
 
-.border_r2, .blog-img_d, .blog_det_con, .services-details .services_det_img .img, .services-details .services_det_img::before, .services-details .services_det_img::after, .blog_date.price, .blog_con .blog_sidebar .blog_items .blog_item, .blog_con .blog_sidebar, .our-numbers .number-items .number-item, .contact_box, .select ~ .select2 .select2-selection--single,
+.border_r2, .blog-img_d, .blog_det_con, .services-details .services_det_img .img, .services-details .services_det_img::before, .services-details .services_det_img::after, .blog_date.price, .blog_con .blog_sidebar .blog_items .blog_item, .blog_con .blog_sidebar, .our-numbers .number-items .number-item, .contact_box, .more_nav .more_dropdown .more_l, .more_nav .more_dropdown, .select ~ .select2 .select2-selection--single,
 .select ~ .select2 .select2-selection--multiple,
 .select-multi ~ .select2 .select2-selection--single,
 .select-multi ~ .select2 .select2-selection--multiple,
@@ -3327,7 +3327,7 @@ html[lang=ar] .pagination .page-item:last-child .page-link {
 .page-navbar .navbar-content .links {
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 23px;
   transition: all 0.8s cubic-bezier(0.68, -0.3, 0.265, 1.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -3405,10 +3405,10 @@ html[lang=ar] .pagination .page-item:last-child .page-link {
 }
 .page-navbar .navbar-content .links .link::after {
   position: absolute;
+  content: "";
   bottom: -1px;
   left: 50%;
   transform: translateX(-50%);
-  content: "";
   width: 30px;
   height: 2px;
   background-color: #c89f6b;
@@ -3441,6 +3441,7 @@ html[lang=ar] .pagination .page-item:last-child .page-link {
   .page-navbar .navbar-content .links .link {
     width: 100%;
     color: #000;
+    flex-shrink: 0;
     height: 35px;
     margin-bottom: 12px;
     font-size: 13px;
@@ -3521,6 +3522,91 @@ html[lang=ar] .pagination .page-item:last-child .page-link {
 .page-navbar.scroll .navbar-content .nav-icons .dropdown-toggle .drop-text,
 .page-navbar.scroll .navbar-content .nav-icons .dropdown-toggle .drop-ic {
   color: #272727 !important;
+}
+
+.more_nav {
+  position: relative;
+}
+.more_nav .more_dropdown {
+  position: absolute;
+  top: 80px;
+  background-color: #fff;
+  z-index: 5;
+  padding: 7px;
+  width: 190px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.68, -0.3, 0.265, 2.1);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+html[lang=en] .more_nav .more_dropdown {
+  right: 0;
+}
+html[lang=ar] .more_nav .more_dropdown {
+  left: 0;
+}
+.more_nav .more_dropdown .more_l {
+  padding: 12px;
+  color: #000;
+  display: block;
+  margin-bottom: 7px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.more_nav .more_dropdown .more_l:hover {
+  background: #f0f0f0;
+}
+.more_nav:hover .more_dropdown {
+  top: 51px;
+  opacity: 1;
+  pointer-events: auto;
+}
+@media screen and (max-width: 992px) {
+  .more_nav {
+    width: 100%;
+  }
+  .more_nav .link {
+    display: none !important;
+  }
+  .more_nav .more_dropdown {
+    position: unset;
+    transform: unset;
+    opacity: 1;
+    pointer-events: auto;
+    width: 100%;
+    padding: 0;
+    box-shadow: unset;
+  }
+}
+@media screen and (max-width: 992px) and (max-width: 992px) {
+  .more_nav .more_dropdown .more_l {
+    width: 100%;
+    color: #000;
+    height: 35px;
+    margin-bottom: 12px;
+    padding: 0;
+    font-size: 13px;
+    text-align: start;
+  }
+  .more_nav .more_dropdown .more_l::after {
+    height: calc(100% + 6px);
+    width: 3px;
+    top: 50%;
+    transform: translateY(-50%) translateX(0);
+    bottom: unset;
+    position: absolute;
+    background-color: #c89f6b;
+    transition: all 0.3s ease;
+    content: "";
+    display: none;
+  }
+  html[lang=en] .more_nav .more_dropdown .more_l::after {
+    left: -9px;
+  }
+  html[lang=ar] .more_nav .more_dropdown .more_l::after {
+    right: -9px;
+  }
 }
 
 .footer {
@@ -5829,10 +5915,33 @@ html[lang=ar] .certificate_card::after {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+.certificate_card .content .title.link_l {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+}
+.certificate_card .content .title.link_l:hover {
+  color: #c89f6b;
 }
 .certificate_card .content .text {
   line-height: 1.8;
   font-size: 13px;
 }
 
-/********************* End certificate_card section *********************//*# sourceMappingURL=main.css.map */
+/********************* End certificate_card section *********************/
+/********************* Start Book section *********************/
+.ipgs-flipbook {
+  direction: ltr;
+  height: 500px !important;
+  width: 680px !important;
+  margin: auto !important;
+}
+@media screen and (max-width: 992px) {
+  .ipgs-flipbook {
+    width: 100% !important;
+  }
+}
+
+/********************* End Book section *********************//*# sourceMappingURL=main.css.map */

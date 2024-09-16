@@ -187,6 +187,7 @@
       font-size: 13px;
       color: #272727;
       transition: $main-transition;
+      max-width: 15px;
     }
 
     &:hover {
@@ -1930,6 +1931,28 @@
   margin: auto !important;
   @media screen and (max-width: $screen-lg) {
     width: 100% !important;
+  }
+}
+
+.main-input.search{
+  .input-me{
+    // border-color: $main;
+    background-color: #f8f8f8;
+    @media screen and (max-width: $screen-xs) {
+      min-height: 48px !important;
+    }
+  }
+
+  .main-icon{
+    pointer-events: auto;
+    background-color: $main;
+    color: $white;
+    @include dir-right(0);
+    height: 100%;
+
+    @media screen and (max-width: $screen-xs) {
+      min-width: 100px;
+    }
   }
 }
 /********************* End Book section *********************/

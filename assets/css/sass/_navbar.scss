@@ -294,46 +294,54 @@
   }
 
   @media screen and (max-width: $screen-lg) {
-    .link {
-      display: none !important;
-    }
+    // .link {
+    //   display: none !important;
+    // }
 
     width: 100%;
 
     .more_dropdown {
-      position: unset;
-      transform: unset;
-      opacity: 1;
-      pointer-events: auto;
-      width: 100%;
-      padding: 0;
-      box-shadow: unset;
+      top: unset !important;
+      bottom: 55px;
 
-      .more_l {
-        @media screen and (max-width:$screen-lg) {
-          width: 100%;
-          color: $black;
-          height: 35px;
-          margin-bottom: 12px;
-          padding: 0;
-          font-size: 13px;
-          text-align: start;
-
-          &::after {
-            @include dir-left(-9px);
-            height: calc(100% + 6px);
-            width: 3px;
-            top: 50%;
-            transform: translateY(-50%) translateX(0);
-            bottom: unset;
-            position: absolute;
-            background-color: $main;
-            transition: $main-transition;
-            content: '';
-            display: none;
-          }
-        }
+      &:hover{
+        top: unset !important;
+        bottom: 55px;
       }
+
+      // position: unset;
+      // transform: unset;
+      // opacity: 1;
+      // pointer-events: auto;
+      // width: 100%;
+      // padding: 0;
+      // box-shadow: unset;
+
+      // .more_l {
+      //   @media screen and (max-width:$screen-lg) {
+      //     width: 100%;
+      //     color: $black;
+      //     height: 35px;
+      //     margin-bottom: 12px;
+      //     padding: 0;
+      //     font-size: 13px;
+      //     text-align: start;
+
+      //     &::after {
+      //       @include dir-left(-9px);
+      //       height: calc(100% + 6px);
+      //       width: 3px;
+      //       top: 50%;
+      //       transform: translateY(-50%) translateX(0);
+      //       bottom: unset;
+      //       position: absolute;
+      //       background-color: $main;
+      //       transition: $main-transition;
+      //       content: '';
+      //       display: none;
+      //     }
+      //   }
+      // }
     }
   }
 }

@@ -3566,46 +3566,13 @@ html[lang=ar] .more_nav .more_dropdown {
   .more_nav {
     width: 100%;
   }
-  .more_nav .link {
-    display: none !important;
-  }
   .more_nav .more_dropdown {
-    position: unset;
-    transform: unset;
-    opacity: 1;
-    pointer-events: auto;
-    width: 100%;
-    padding: 0;
-    box-shadow: unset;
+    top: unset !important;
+    bottom: 55px;
   }
-}
-@media screen and (max-width: 992px) and (max-width: 992px) {
-  .more_nav .more_dropdown .more_l {
-    width: 100%;
-    color: #000;
-    height: 35px;
-    margin-bottom: 12px;
-    padding: 0;
-    font-size: 13px;
-    text-align: start;
-  }
-  .more_nav .more_dropdown .more_l::after {
-    height: calc(100% + 6px);
-    width: 3px;
-    top: 50%;
-    transform: translateY(-50%) translateX(0);
-    bottom: unset;
-    position: absolute;
-    background-color: #c89f6b;
-    transition: all 0.3s ease;
-    content: "";
-    display: none;
-  }
-  html[lang=en] .more_nav .more_dropdown .more_l::after {
-    left: -9px;
-  }
-  html[lang=ar] .more_nav .more_dropdown .more_l::after {
-    right: -9px;
+  .more_nav .more_dropdown:hover {
+    top: unset !important;
+    bottom: 55px;
   }
 }
 
@@ -4248,6 +4215,7 @@ html[lang=ar] .social-icon {
   font-size: 13px;
   color: #272727;
   transition: all 0.3s ease;
+  max-width: 15px;
 }
 .social-icon .social:hover .ic {
   color: #c89f6b;
@@ -5941,6 +5909,32 @@ html[lang=ar] .certificate_card::after {
 @media screen and (max-width: 992px) {
   .ipgs-flipbook {
     width: 100% !important;
+  }
+}
+
+.main-input.search .input-me {
+  background-color: #f8f8f8;
+}
+@media screen and (max-width: 425px) {
+  .main-input.search .input-me {
+    min-height: 48px !important;
+  }
+}
+.main-input.search .main-icon {
+  pointer-events: auto;
+  background-color: #c89f6b;
+  color: #fff;
+  height: 100%;
+}
+html[lang=en] .main-input.search .main-icon {
+  right: 0;
+}
+html[lang=ar] .main-input.search .main-icon {
+  left: 0;
+}
+@media screen and (max-width: 425px) {
+  .main-input.search .main-icon {
+    min-width: 100px;
   }
 }
 

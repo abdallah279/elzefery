@@ -1297,7 +1297,7 @@ html[lang=ar] .copy-item {
   border-end-start-radius: 5px;
 }
 
-.border_r2, .blog-img_d, .blog_det_con, .services-details .services_det_img .img, .services-details .services_det_img::before, .services-details .services_det_img::after, .blog_date.price, .blog_con .blog_sidebar .blog_items .blog_item, .blog_con .blog_sidebar, .our-numbers .number-items .number-item, .contact_box, .more_nav .more_dropdown .more_l, .more_nav .more_dropdown, .select ~ .select2 .select2-selection--single,
+.border_r2, .blog-img_d, .blog_det_con, .services-details .services_det_img .img, .services-details .services_det_img::before, .services-details .services_det_img::after, .blog_date.price, .blog_con .blog_sidebar .blog_items .blog_item, .blog_con .blog_sidebar, .our-numbers .number-items .number-item, .contact_box, .about-right-flex .about-tabs-container.work .about-tabs .about-tab.active, .about-right-flex .about-tabs-container.work .about-tabs, .more_nav .more_dropdown .more_l, .more_nav .more_dropdown, .select ~ .select2 .select2-selection--single,
 .select ~ .select2 .select2-selection--multiple,
 .select-multi ~ .select2 .select2-selection--single,
 .select-multi ~ .select2 .select2-selection--multiple,
@@ -3578,7 +3578,7 @@ html[lang=ar] .more_nav .more_dropdown {
 
 .footer {
   display: block;
-  padding-top: 150px;
+  padding-top: 50px;
   padding-bottom: 25px;
   position: relative;
   overflow: hidden;
@@ -4396,6 +4396,44 @@ html[lang=ar] .about-right-flex .about-tabs-container .about-tabs .about-tab::af
 }
 .about-right-flex .about-tabs-container .about-tabs .about-tab.active::after {
   opacity: 1;
+}
+.about-right-flex .about-tabs-container.work {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+  overflow-x: auto;
+  max-width: 100%;
+}
+.about-right-flex .about-tabs-container.work::-webkit-scrollbar {
+  height: 3px;
+}
+.about-right-flex .about-tabs-container.work::-webkit-scrollbar-track {
+  background: transparent;
+}
+.about-right-flex .about-tabs-container.work::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background-color: #f0f0f0;
+}
+.about-right-flex .about-tabs-container.work .about-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+}
+.about-right-flex .about-tabs-container.work .about-tabs .about-tab {
+  border-radius: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 9px 22px;
+  background-color: transparent;
+}
+.about-right-flex .about-tabs-container.work .about-tabs .about-tab::after {
+  display: none;
+}
+.about-right-flex .about-tabs-container.work .about-tabs .about-tab.active {
+  background-color: #c89f6b;
+  color: #fff;
 }
 .about-right-flex .about-title {
   display: flex;

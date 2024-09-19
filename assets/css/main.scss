@@ -327,6 +327,7 @@
     .about-tabs {
       padding: 15px 18px;
       background-color: #F4F4F4;
+      
 
       .about-tab {
         margin-bottom: 18px;
@@ -360,6 +361,52 @@
         }
       }
 
+    }
+
+    &.work {
+      width: fit-content;
+      margin-inline: auto;
+      overflow-x: auto;
+      max-width: 100%;
+
+      &::-webkit-scrollbar {
+        height: 3px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 25px;
+        background-color: #f0f0f0;
+      }
+
+      .about-tabs {
+        @include center;
+        gap: 12px;
+        padding: 10px 15px;
+        background-color: #f9f9f9;
+        @extend .border_r2;
+        
+        .about-tab {
+          border-radius: 0 !important;
+          margin-bottom: 0 !important;
+          padding: 9px 22px;
+          background-color: transparent;
+
+          &::after {
+            display: none;
+          }
+
+          &.active {
+            background-color: $main;
+            color: $white;
+            // @include border-radius(25px);
+            @extend .border_r2;
+          }
+        }
+      }
     }
   }
 
@@ -1251,7 +1298,7 @@
   height: 432px;
   border-radius: 15px;
 
-  &.sm{
+  &.sm {
     height: 330px;
   }
 
@@ -1305,15 +1352,15 @@
   flex-direction: column;
   background-color: $main;
   @extend .border_r2;
-  padding:  15px;
+  padding: 15px;
   color: $white;
   flex-wrap: wrap;
 
-  .name{
+  .name {
     @include center;
     gap: 7px;
 
-    i{
+    i {
       margin-top: 3px;
     }
   }
@@ -1904,11 +1951,12 @@
       margin-bottom: 10px;
       transition: $main-transition;
 
-      &.link_l{
+      &.link_l {
         display: block;
         text-align: center;
         font-size: 13px;
-        &:hover{
+
+        &:hover {
           color: $main;
         }
       }
@@ -1929,21 +1977,23 @@
   height: 500px !important;
   width: 680px !important;
   margin: auto !important;
+
   @media screen and (max-width: $screen-lg) {
     width: 100% !important;
   }
 }
 
-.main-input.search{
-  .input-me{
+.main-input.search {
+  .input-me {
     // border-color: $main;
     background-color: #f8f8f8;
+
     @media screen and (max-width: $screen-xs) {
       min-height: 48px !important;
     }
   }
 
-  .main-icon{
+  .main-icon {
     pointer-events: auto;
     background-color: $main;
     color: $white;
@@ -1955,4 +2005,5 @@
     }
   }
 }
+
 /********************* End Book section *********************/

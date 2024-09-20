@@ -327,7 +327,7 @@
     .about-tabs {
       padding: 15px 18px;
       background-color: #F4F4F4;
-      
+
 
       .about-tab {
         margin-bottom: 18px;
@@ -388,7 +388,7 @@
         padding: 10px 15px;
         background-color: #f9f9f9;
         @extend .border_r2;
-        
+
         .about-tab {
           border-radius: 0 !important;
           margin-bottom: 0 !important;
@@ -2007,3 +2007,109 @@
 }
 
 /********************* End Book section *********************/
+
+/***************** Start package_card *********************/
+
+.package_card {
+  display: block;
+  background-color: $white;
+  // @include border-radius(15px);
+  @extend .border_r2;
+  padding: 20px 20px 30px;
+  box-shadow: 0 0 30px rgba($color: #000000, $alpha: 3%);
+  height: 100%;
+  color: $black !important;
+  border: 1px solid rgba($color: $main, $alpha: .5);
+  transition: $main-transition;
+
+  .head {
+    padding: 24px 15px;
+    @extend .border_r2;
+    background-color: rgba($color: $main, $alpha: .1);
+  }
+
+  .price {
+    color: #106390;
+  }
+
+  .text,
+  i {
+    color: $dark;
+  }
+
+  .main-btn {
+    @include border-radius(5px);
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba($color: $main, $alpha: .5);
+  }
+}
+
+/***************** End package_card *********************/
+
+/***************** Start  *********************/
+.invoices {
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    // background-color: $blue2;
+  }
+}
+
+.invoices-table {
+  width: 100%;
+  white-space: nowrap;
+
+  thead {
+    // border-bottom: 1px solid $border-color;
+
+    th {
+      padding: 15px 10px;
+      text-align: center;
+      font-size: 16px;
+      color: $dark;
+      font-weight: 600;
+      background-color: rgba($color: $main, $alpha: .1);
+
+      @media screen and (max-width: $screen-xs) {
+        font-size: 14px;
+        padding: 15px 12px;
+      }
+    }
+  }
+
+  tbody {
+
+    tr {
+      td {
+        font-size: 15px;
+        color: $dark;
+        padding: 20px 10px;
+        text-align: center;
+        vertical-align: middle;
+
+        @media screen and (max-width: $screen-xs) {
+          font-size: 13px;
+          padding: 15px 12px;
+        }
+      }
+
+      &:nth-child(even) {
+        background-color: rgba($color: #f3f3f3, $alpha: .3);
+      }
+    }
+  }
+}
+
+/***************** End  *********************/

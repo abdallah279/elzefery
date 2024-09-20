@@ -2607,3 +2607,147 @@
     display: none;
   }
 }
+
+
+.upload-label {
+  position: relative;
+  background-color: $white;
+  min-width: 100px;
+  height: 90px;
+  border-radius: 5px;
+  border: 1px dashed $main;
+  @include center;
+  flex-direction: column;
+  gap: 10px;
+  color: #888;
+  font-size: 12px;
+  padding: 5px 12px;
+  flex-shrink: 0;
+  max-width: 160px;
+  text-align: center;
+
+  i {
+    font-size: 18px;
+  }
+
+  img {
+    max-height: 36px;
+  }
+}
+
+.hidden-img {
+  position: relative;
+  flex-shrink: 0;
+  width: 100px;
+  height: 90px;
+  border: 1px solid $border-input;
+  border-radius: 5px;
+
+  img {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &.lg {
+    width: 100px;
+    height: 100px;
+
+    img {
+      border-radius: 5px;
+    }
+  }
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.remove-img,
+.remove_img_modal {
+  position: absolute;
+  top: -7px;
+  @include dir-right(-7px);
+  @include circle(18px);
+  background-color: $red;
+  color: $white;
+  @include center;
+  cursor: pointer;
+  font-size: 13px;
+
+  i {
+    font-size: 13px;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.photo-con {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.remove-img-2 {
+  position: absolute;
+  top: -5px;
+  @include dir-right(-5px);
+  @include circle(15px);
+  @include center;
+  background-color: $red;
+  color: $white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.img-upload-show {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  &.active {
+    justify-content: flex-start;
+  }
+}
+
+
+// upload-img
+.hidden-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-con {
+  // border: 1px solid $main;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: $dark;
+  padding: 8px 12px;
+  font-size: 14px;
+  // margin-top: 10px;
+  width: fit-content;
+  cursor: pointer;
+  background-color: rgba($color: $main, $alpha: .3);
+  position: relative;
+
+  .close {
+    color: $black;
+  }
+}

@@ -3293,6 +3293,161 @@ html[lang=ar] .pagination .page-item:last-child .page-link {
   }
 }
 
+.upload-label {
+  position: relative;
+  background-color: #fff;
+  min-width: 100px;
+  height: 90px;
+  border-radius: 5px;
+  border: 1px dashed #c89f6b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  color: #888;
+  font-size: 12px;
+  padding: 5px 12px;
+  flex-shrink: 0;
+  max-width: 160px;
+  text-align: center;
+}
+.upload-label i {
+  font-size: 18px;
+}
+.upload-label img {
+  max-height: 36px;
+}
+
+.hidden-img {
+  position: relative;
+  flex-shrink: 0;
+  width: 100px;
+  height: 90px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+}
+.hidden-img img {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hidden-img.lg {
+  width: 100px;
+  height: 100px;
+}
+.hidden-img.lg img {
+  border-radius: 5px;
+}
+.hidden-img a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.remove-img,
+.remove_img_modal {
+  position: absolute;
+  top: -7px;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  background-color: #D44A4A;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 13px;
+}
+html[lang=en] .remove-img,
+html[lang=en] .remove_img_modal {
+  right: -7px;
+}
+html[lang=ar] .remove-img,
+html[lang=ar] .remove_img_modal {
+  left: -7px;
+}
+.remove-img i,
+.remove_img_modal i {
+  font-size: 13px;
+}
+.remove-img img,
+.remove_img_modal img {
+  width: 24px;
+  height: 24px;
+}
+
+.photo-con {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.remove-img-2 {
+  position: absolute;
+  top: -5px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D44A4A;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+html[lang=en] .remove-img-2 {
+  right: -5px;
+}
+html[lang=ar] .remove-img-2 {
+  left: -5px;
+}
+
+.img-upload-show {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.img-upload-show.active {
+  justify-content: flex-start;
+}
+
+.hidden-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-con {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #272727;
+  padding: 8px 12px;
+  font-size: 14px;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  background-color: rgba(200, 159, 107, 0.3);
+  position: relative;
+}
+.file-con .close {
+  color: #000;
+}
+
 .page-navbar {
   padding: 10px 0;
   position: fixed;

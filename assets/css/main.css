@@ -4559,6 +4559,11 @@ html[lang=ar] .about-right-flex .about-tabs-container .about-tabs .about-tab::af
   overflow-x: auto;
   max-width: 100%;
 }
+@media screen and (max-width: 425px) {
+  .about-right-flex .about-tabs-container.work {
+    justify-content: flex-start !important;
+  }
+}
 .about-right-flex .about-tabs-container.work::-webkit-scrollbar {
   height: 3px;
 }
@@ -6212,4 +6217,68 @@ html[lang=ar] .main-input.search .main-icon {
   background-color: rgba(243, 243, 243, 0.3);
 }
 
-/***************** End  *********************//*# sourceMappingURL=main.css.map */
+/***************** End  *********************/
+/***************************************** New Code  *********************************************/
+.blog_sec .row img,
+.blog_sec .row p img,
+.blog_sec .row video {
+  width: 100%;
+  height: 430px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 425px) {
+  .blog_sec {
+    padding-inline-start: 13px !important;
+    padding-inline-end: 5px !important;
+  }
+}
+
+.blog_sec .row table {
+  max-width: 100% !important;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+.blog_sec .row table::-webkit-scrollbar {
+  height: 4px;
+}
+.blog_sec .row table::-webkit-scrollbar-track {
+  background: transparent;
+}
+.blog_sec .row table::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+}
+.blog_sec .row table thead th {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #272727;
+  font-weight: 600;
+  background-color: rgba(200, 159, 107, 0.1);
+}
+@media screen and (max-width: 425px) {
+  .blog_sec .row table thead th {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+.blog_sec .row table tbody tr td {
+  font-size: 15px;
+  color: #272727;
+  padding: 12px 15px;
+  vertical-align: middle;
+  border: 2px solid #ddd;
+}
+@media screen and (max-width: 425px) {
+  .blog_sec .row table tbody tr td {
+    font-size: 11px;
+    padding: 12px;
+  }
+}
+.blog_sec .row table tbody tr:nth-child(even) {
+  background-color: rgba(243, 243, 243, 0.3);
+}
+
+.footer p {
+  color: #fff !important;
+}/*# sourceMappingURL=main.css.map */

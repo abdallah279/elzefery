@@ -1881,7 +1881,7 @@
   margin-bottom: 22px;
 
   .user_img {
-    @include circle(60px);
+    @include circle(60px !important);
     flex-shrink: 0;
   }
 

@@ -6007,8 +6007,8 @@ html[lang=ar] .services-details .services_det_img::after {
 }
 .comment .user_img {
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 60px !important;
+  height: 60px !important;
   flex-shrink: 0;
 }
 .comment .name {
